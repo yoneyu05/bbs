@@ -13,19 +13,20 @@
   </thead>
 
   <tbody>
+    <%= will_paginate %>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= topic.title %></td>
+        <td><%= link_to topic.title, topic_path(topic.id) %></td>
         <td><%= topic.name %></td>
         <td><%= topic.content %></td>
-        <td><%= link_to 'Show', topic %></td>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <%= will_paginate %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= render 'form', topic: @topic %>

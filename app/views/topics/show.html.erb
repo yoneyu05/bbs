@@ -7,8 +7,6 @@
 
 <% if @topic.image? %>
   <%= image_tag @topic.image.url %>
-<% else %>
-  <%= image_tag "noimage.gif" %>
 <% end %>
 
 <p>
@@ -21,5 +19,8 @@
   <%= @topic.content %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
+
+<%= render 'posts/index' %>
+
+<%#= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
