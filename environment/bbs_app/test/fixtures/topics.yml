@@ -4,8 +4,6 @@ one:
   title: MyString
   name: MyString
   content: MyText
+  email: test@gmail.com
 
-two:
-  title: MyString
-  name: MyString
-  content: MyText
+

@@ -40,9 +40,10 @@
         <td><%= post.name %></td>
         <td><%= post.content %></td>
         <td><%= post.created_at %></td>
-<!--         <td><%#= link_to 'Show', post %></td>
-        <td><%#= link_to 'Edit', edit_post_path(post) %></td> -->
+        <% if user_signed_in? %>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -85,6 +86,4 @@
   </div>
 <% end %>
 
-
-<%#= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

@@ -25,10 +25,10 @@ class TopicsController < ApplicationController
     end
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to topics_path, notice: 'Topic was successfully created.' }
+        format.html { redirect_to topics_path, notice: 'できたよ！' }
         format.json { render :show, status: :created, location: @topic }
       else
-        format.html { render :new }
+        format.html { redirect_to topics_path, notice: 'タイトルと内容は何か入れてね。' }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end
