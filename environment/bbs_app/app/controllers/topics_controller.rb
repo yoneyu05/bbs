@@ -28,7 +28,7 @@ class TopicsController < ApplicationController
         format.html { redirect_to topics_path, notice: 'できたよ！' }
         format.json { render :show, status: :created, location: @topic }
       else
-        format.html { redirect_to topics_path, notice: 'タイトルと内容は何か入れてね。' }
+        format.html { redirect_to topics_path, notice: 'タイトルは何か入れてね。' }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end

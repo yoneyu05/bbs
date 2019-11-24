@@ -35,10 +35,10 @@ class PostsController < ApplicationController
     end
     respond_to do |format|
       if @post.save
-        format.html {redirect_to topics_show_path(params[:post]['topic_id'])}
+        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '投稿できたよ。' }
         format.json { render :index, status: :created, location: @post }
       else
-        format.html {redirect_to topics_show_path(params[:post]['topic_id'])}
+        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '内容を書いてね。' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
