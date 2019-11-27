@@ -5,7 +5,7 @@
 
 body {
   margin: 0%;
-  background-color: #fff;
+  background-color: #FFFFEE;
   color: #333;
 
   font-family: verdana, arial, helvetica, sans-serif;
@@ -93,6 +93,15 @@ label {
   position: relative;
     background: #95ccff;
     box-shadow: 0px 0px 0px 5px #95ccff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+
+.postshow{
+  position: relative;
+    background: #F0E0D6;
+    box-shadow: 0px 0px 0px 5px #F0E0D6;
     border: dashed 2px white;
     padding: 0.2em 0.5em;
     color: #454545;

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191124214631) do
+ActiveRecord::Schema.define(version: 20191127194832) do
+
+  create_table "delrequests", force: :cascade do |t|
+    t.string "address"
+    t.string "del_id"
+    t.text "reason"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type 'srting' for column 'image'

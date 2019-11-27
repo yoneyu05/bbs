@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @delrequest.address %>
+</p>
+
+<p>
+  <strong>Del:</strong>
+  <%= @delrequest.del_id %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @delrequest.reason %>
+</p>
+
+<%= link_to 'Edit', edit_delrequest_path(@delrequest) %> |
+<%= link_to 'Back', delrequests_path %>

@@ -41,29 +41,29 @@
                 <% @posts.each do |post| %>
         <table class="table table-condensed">
             <tbody>
-                <tr class="topicshow">
+                <tr class="postshow">
                     <td colspan="2" class="topic_td">
                         <%= post.id %>　
                         <%= post.name %>　
                         <%= post.created_at %>
                     </td>
                     <% if post.image? %>
-                <tr class="topicshow">
+                <tr class="postshow">
                     <td class="topic_td col-xs-3 col-sm-3 col-md-3 col-lg-3">
                         <%= image_tag post.image.url %>
                     </td>
                     <td class="topic_td">
                         <%= simple_format(post.content) %>
-                    </td>    
+                    </td>
                 </tr>
-                    <% else %>   
-                    <tr class="topicshow"> 
+                    <% else %>
+                    <tr class="postshow">
                     <td class="topic_td">
                         <%= simple_format(post.content) %>
                     </td>
                     </tr>
                 <% end %>
-                <tr class="topicshow">
+                <tr class="postshow">
                 <% if user_signed_in? %>
                     <td>
                         <%= link_to 'Edit', edit_topic_path(topic) %>
@@ -90,15 +90,15 @@
         </p>
         <%= form_with(model: @post, local: true) do |form| %>
         <div class="field">
-            <%= form.label :content %>
+            <%= form.label :内容 %>
             <%= form.text_area :content, id: :post_content %>
         </div>
         <div class="field">
-            <%= form.label :name %>
+            <%= form.label :名前 %>
             <%= form.text_field :name, id: :post_name %>
         </div>
         <div class="field">
-            <%= form.label :image %>
+            <%= form.label :画像 %>
             <%= form.file_field :image %>
         </div>
         <%= form.hidden_field :topic_id %>

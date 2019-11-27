@@ -1,0 +1,32 @@
+<%= form_with(model: delrequest, local: true) do |form| %>
+  <% if delrequest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(delrequest.errors.count, "error") %> prohibited this delrequest from being saved:</h2>
+
+      <ul>
+      <% delrequest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :delrequest_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :del_id %>
+    <%= form.text_field :del_id, id: :delrequest_del_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason %>
+    <%= form.text_area :reason, id: :delrequest_reason %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

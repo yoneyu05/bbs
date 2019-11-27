@@ -1,29 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 とりあえず作ってみるもの
 ！掲示板！(うえから順番にやる)
 
@@ -48,7 +24,7 @@ DBトランザクションの制御機能 ○
 単体テスト機能（ライブラリを使う）
 統合テスト機能（ライブラリを使う）
 
-webデザイン
+webデザイン ○
 
 
 AWS

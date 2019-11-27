@@ -17954,3 +17954,697 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 192.168.33.1 at 2019-11-28 00:34:06 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (57.8ms)
+  Rendered topics/index.html.erb within layouts/application (339.3ms)
+Completed 200 OK in 1561ms (Views: 1466.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 00:34:12 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (60.4ms)
+Completed 200 OK in 205ms (Views: 167.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 192.168.33.1 at 2019-11-28 03:53:16 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (60.7ms)
+  Rendered topics/index.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 1290ms (Views: 1198.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 03:53:27 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 181ms (Views: 132.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 03:56:51 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (14.2ms)
+  Rendered topics/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 153ms (Views: 145.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 03:59:53 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (9.1ms)
+  Rendered topics/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 211ms (Views: 171.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:00:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (7.7ms)
+  Rendered topics/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 133ms (Views: 129.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:01:00 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (8.2ms)
+  Rendered topics/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 127ms (Views: 124.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/7" for 192.168.33.1 at 2019-11-28 04:01:02 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 7]]
+  Rendered topics/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 241ms (Views: 194.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/topics/7" for 192.168.33.1 at 2019-11-28 04:01:32 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 7]]
+  Rendered topics/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 159ms (Views: 154.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/6" for 192.168.33.1 at 2019-11-28 04:01:41 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 116ms (Views: 111.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:07:29 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 133ms (Views: 124.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/topics/3" for 192.168.33.1 at 2019-11-28 04:07:32 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 3]]
+  Rendered topics/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 125ms (Views: 118.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:07:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 166ms (Views: 161.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:08:48 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 4722ms (Views: 4713.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:09:04 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 4382ms (Views: 4374.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:09:25 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 5194ms (Views: 5186.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:09:58 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 4298ms (Views: 4277.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:10:19 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 137ms (Views: 131.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:10:33 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (7.6ms)
+  Rendered topics/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 140ms (Views: 135.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:11:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (7.7ms)
+  Rendered topics/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 4440ms (Views: 4433.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:11:33 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 133ms (Views: 125.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/7" for 192.168.33.1 at 2019-11-28 04:16:18 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 7]]
+  Rendered topics/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 130ms (Views: 123.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:16:20 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 207ms (Views: 201.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 192.168.33.1 at 2019-11-28 04:17:09 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wEJM45/U6+1Cj4CfwIRSe60fbohwe+BTCt2FiU0qjBIMKcHKtzJ1A96VWoKJqXAbkk+Ti+qelQOZ7d+fM4XjkA==", "post"=>{"content"=>"てｓｔ", "name"=>"", "topic_id"=>"4"}, "commit"=>"登録する"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("content", "name", "created_at", "updated_at", "topic_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "てｓｔ"], ["name", "ネットエリートさん"], ["created_at", "2019-11-27 19:17:09.905308"], ["updated_at", "2019-11-27 19:17:09.905308"], ["topic_id", 4]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.168.33.10:3000/topics/show/4
+Completed 302 Found in 78ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/topics/show/4" for 192.168.33.1 at 2019-11-28 04:17:09 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 223ms (Views: 213.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/show/4" for 192.168.33.1 at 2019-11-28 04:17:18 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 129ms (Views: 122.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 192.168.33.1 at 2019-11-28 04:17:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tfCRpjZKrhEjfaZWIR/yFVY/5H2y3krV9yjobHzhMbN5mxyPHqww/79nfEtoMtB1aW8Zfig7P4VkGLJ6Ak5eMQ==", "post"=>{"content"=>"あああ", "name"=>"", "topic_id"=>"4"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("content", "name", "created_at", "updated_at", "topic_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "あああ"], ["name", "ネットエリートさん"], ["created_at", "2019-11-27 19:17:24.247901"], ["updated_at", "2019-11-27 19:17:24.247901"], ["topic_id", 4]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.168.33.10:3000/topics/show/4
+Completed 302 Found in 24ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/topics/show/4" for 192.168.33.1 at 2019-11-28 04:17:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."created_at" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 139ms (Views: 134.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/show/4" for 192.168.33.1 at 2019-11-28 04:18:20 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 207ms (Views: 129.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/topics/show/4" for 192.168.33.1 at 2019-11-28 04:18:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."id" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 211ms (Views: 140.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:18:46 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (8.1ms)
+  Rendered topics/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 131ms (Views: 127.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-11-28 04:18:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rmDO8jRSk7aH1/OoaIbB3SnrLXLNebr0xYIdUrO/F008SYPl3w8j4jwMRMNhdIbN/B+83FhjFrYXASJJjuHiIg==", "topic"=>{"title"=>"test", "name"=>"", "content"=>"ｈｆｂｆんｊんｋ"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "name", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "test"], ["name", "ネットエリートさん"], ["content", "ｈｆｂｆんｊんｋ"], ["created_at", "2019-11-27 19:18:55.100305"], ["updated_at", "2019-11-27 19:18:55.100305"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 16ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:18:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (7.7ms)
+  Rendered topics/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 127ms (Views: 124.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:19:08 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (8.2ms)
+  Rendered topics/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 246ms (Views: 207.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:19:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 148ms (Views: 116.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:19:44 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 137ms (Views: 132.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:20:23 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (7.5ms)
+  Rendered topics/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 139ms (Views: 135.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/7" for 192.168.33.1 at 2019-11-28 04:40:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 7]]
+  Rendered topics/show.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 1263ms (Views: 1139.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/topics/4" for 192.168.33.1 at 2019-11-28 04:40:49 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? ORDER BY "topics"."created_at" DESC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ? ORDER BY "posts"."id" ASC[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 180ms (Views: 170.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:52:41 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDelrequests (20191127194832)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "delrequests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "del_id" varchar, "reason" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191127194832"]]
+  [1m[35m (33.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:54:29 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  Rendered topics/index.html.erb within layouts/application (55.2ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"delrequests"}, missing required keys: [:id]):
+     8: <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
+     9: <% end %>
+    10: 
+    11: <%= link_to '削除依頼', delrequest_path, method: :get  %>
+    12: <br>
+    13: <br>
+    14: <br>
+  
+app/views/topics/index.html.erb:11:in `_app_views_topics_index_html_erb___3132972666702523611_42161780'
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:55:47 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  Rendered topics/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"delrequests"}, missing required keys: [:id]):
+     8: <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
+     9: <% end %>
+    10: 
+    11: <%= link_to '削除依頼', delrequest_path, method: :get  %>
+    12: <br>
+    13: <br>
+    14: <br>
+  
+app/views/topics/index.html.erb:11:in `_app_views_topics_index_html_erb___3132972666702523611_44067020'
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 04:56:07 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (73.1ms)
+  Rendered topics/index.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 1733ms (Views: 1721.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 04:56:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Parameters: {"authenticity_token"=>"zuePd5y9waHS24djDylyQqI/zQ63vmnPGpVrTIXVpkgCjAJetFtfT07BXX5GBFAinW8wDS1bHJ+JpTFa+3rJyg=="}
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT "delrequests".* FROM "delrequests"[0m
+  Rendered delrequests/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 151ms (Views: 143.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/delrequests/new" for 192.168.33.1 at 2019-11-28 04:56:25 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#new as HTML
+  Rendering delrequests/new.html.erb within layouts/application
+  Rendered delrequests/_form.html.erb (10.6ms)
+  Rendered delrequests/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 167ms (Views: 151.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:01:28 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.5ms)[0m  [1m[34mSELECT "delrequests".* FROM "delrequests"[0m
+  Rendered delrequests/_form.html.erb (9.4ms)
+  Rendered delrequests/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: delrequest, local: true) do |form| %>
+    2:   <% if delrequest.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(delrequest.errors.count, "error") %> prohibited this delrequest from being saved:</h2>
+    5: 
+  
+app/views/delrequests/_form.html.erb:2:in `block in _app_views_delrequests__form_html_erb___1296602025043822194_70258955344500'
+app/views/delrequests/_form.html.erb:1:in `_app_views_delrequests__form_html_erb___1296602025043822194_70258955344500'
+app/views/delrequests/index.html.erb:30:in `_app_views_delrequests_index_html_erb___1107132367391102574_70258955392800'
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:02:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT "delrequests".* FROM "delrequests"[0m
+  Rendered delrequests/_form.html.erb (7.8ms)
+  Rendered delrequests/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 171ms (Views: 140.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/delrequests" for 192.168.33.1 at 2019-11-28 05:02:39 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QO3vfwx3AfROYW4UhF0fOWarRBvlP3LbekeYxxGHGI9aDqU1NdC6U0jX6UbPFYc2spQE/VxiJv+2UR1Yulz4A==", "delrequest"=>{"address"=>"test", "del_id"=>"test", "reason"=>"test"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "delrequests" ("address", "del_id", "reason", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "test"], ["del_id", "test"], ["reason", "test"], ["created_at", "2019-11-27 20:02:39.793983"], ["updated_at", "2019-11-27 20:02:39.793983"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.168.33.10:3000/delrequests/1
+Completed 302 Found in 28ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/delrequests/1" for 192.168.33.1 at 2019-11-28 05:02:39 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT  "delrequests".* FROM "delrequests" WHERE "delrequests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering delrequests/show.html.erb within layouts/application
+  Rendered delrequests/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 172ms (Views: 134.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/delrequests/1/edit" for 192.168.33.1 at 2019-11-28 05:02:43 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT  "delrequests".* FROM "delrequests" WHERE "delrequests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering delrequests/edit.html.erb within layouts/application
+  Rendered delrequests/_form.html.erb (6.1ms)
+  Rendered delrequests/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 135ms (Views: 129.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:02:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT "delrequests".* FROM "delrequests"[0m
+  Rendered delrequests/_form.html.erb (5.6ms)
+  Rendered delrequests/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 141ms (Views: 138.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:06:42 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT "delrequests".* FROM "delrequests"[0m
+  Rendered delrequests/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    33: 
+    34: <div class="row">
+    35: <div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
+    36:     <% @topics.each do |topic| %>
+    37: <table class="table table-condensed table-hover">
+    38:     <%= will_paginate %>
+    39:   <tbody>
+  
+app/views/delrequests/index.html.erb:36:in `_app_views_delrequests_index_html_erb___1107132367391102574_70258958728380'
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:07:31 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  Rendered delrequests/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vagrant/products/bbs_app/app/views/delrequests/index.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/delrequests/index.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 05:08:38 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  Rendered delrequests/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vagrant/products/bbs_app/app/views/delrequests/index.html.erb:71: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/delrequests/index.html.erb:71: syntax error, unexpected ensure, expecting end-of-input
