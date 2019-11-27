@@ -5,6 +5,6 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :name
       t.timestamps
     end
-    add_index :posts, [:topic_id, :created_at]
+    #add_index :posts, [:topic_id, :created_at]
   end
 end

@@ -11,30 +11,24 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    set_topic
-    @post = Post.new(:topic_id => params[:id]) #ここを追加
+    @post = Post.new(:topic_id => params[:id])
     @posts = Post.where(topic_id: params[:id])
   end
-
-  # GET /topics/new
-  # def new
-  #   @topic = Topic.new
-  # end
-
-  # GET /topics/1/edit
-  # def edit
-  # end
 
   # POST /topics
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
+    #debugger
+    if @topic.name == ""
+      @topic.name = "ネットエリートさん"
+    end
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to topics_path, notice: 'Topic was successfully created.' }
+        format.html { redirect_to topics_path, notice: 'できたよ！' }
         format.json { render :show, status: :created, location: @topic }
       else
-        format.html { render :new }
+        format.html { redirect_to topics_path, notice: 'タイトルは何か入れてね。' }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end

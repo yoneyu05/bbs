@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @topic.title %>
@@ -8,9 +6,6 @@
 <% if @topic.image? %>
   <%= image_tag @topic.image.url %>
 <% end %>
-
-<strong>Id:</strong>
-<%= @topic.id %>
 
 <p>
   <strong>Name:</strong>
@@ -31,6 +26,7 @@
       <th>Id</th>
       <th>Name</th>
       <th>Content</th>
+      <th>created_time</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -41,9 +37,11 @@
         <td><%= post.id %></td>
         <td><%= post.name %></td>
         <td><%= post.content %></td>
-<!--         <td><%#= link_to 'Show', post %></td>
-        <td><%#= link_to 'Edit', edit_post_path(post) %></td> -->
+        <td><%= post.created_at %></td>
+        <% if user_signed_in? %>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -79,11 +77,11 @@
 <%= form.file_field :image %>
 </div>
 
+<%= form.hidden_field :topic_id %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
 
-
-<%#= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

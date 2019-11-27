@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% unless user_signed_in? %>
+<%= link_to '管理ユーザー登録', new_user_registration_path %>
+<%= link_to '管理ユーザーログイン', new_user_session_path %>
+<% else %>
+<%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
+<% end %>
 
 <h1>Topics</h1>
 
@@ -12,6 +17,7 @@
     </tr>
   </thead>
 
+
   <tbody>
     <%= will_paginate %>
     <% @topics.each do |topic| %>
@@ -19,8 +25,10 @@
         <td><%= link_to topic.title, topics_show_path(topic.id) %></td>
         <td><%= topic.name %></td>
         <td><%= topic.content %></td>
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
     <%= will_paginate %>

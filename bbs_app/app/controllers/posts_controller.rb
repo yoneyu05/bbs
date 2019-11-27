@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = Post.new(:topic_id => params[:id])
   end
 
   # GET /posts/1/edit
@@ -30,13 +30,15 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    if @post.name == ""
+      @post.name = "ネットエリートさん"
+    end
     respond_to do |format|
       if @post.save
-        format.html {redirect_to topics_show_path(params[:id])}
+        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '投稿できたよ。' }
         format.json { render :index, status: :created, location: @post }
       else
-        format.html {redirect_to topics_show_path(params[:id])}
+        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '内容を書いてね。' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
