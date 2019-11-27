@@ -12,45 +12,41 @@
 <br>
 <br>
 
-<div class="col-xs-12 col-sm-6 col-md-7">
-<table>
+<div class="row">
+<div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
+<table class="table table-condensed table-hover">
   <tbody>
     <%= will_paginate %>
-    <div class="topic_table">
-    	
-    
-
-
-
-
     <% @topics.each do |topic| %>
-    
-
-      <tr class="topicshow">
-      	<td class="center-block">
-          <%= link_to topics_show_path(topic.id) do %>
-            <b><%= topic.title %></b>
-            <%= topic.name %>
-            <%= topic.created_at %>
+        <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
+      	<td>
+          <b><%= topic.title %></b>
+          <%= topic.name %>
+          <%= topic.created_at %>
+          <% if topic.image? %>
+          <%= image_tag topic.image.url %>
           <% end %>
         </td>
-      	<td class="center-block"><% if topic.image? %><%= link_to topics_show_path(topic.id) do %><%= image_tag topic.image.url %><% end %><% end %></td>
-        <td class="center-block"><%= link_to topics_show_path(topic.id) do %><%= topic.content.truncate(50) %><% end %></td>
+        <td><%= topic.content.truncate(50) %></td>
+        </tr>
         <% if user_signed_in? %>
-        <td class="center-block"><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td class="center-block"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+
       <% end %>
     <% end %>
-    </div>
     <%= will_paginate %>
 
   </tbody>
 </table>
 </div>
 <br>
-<div class="col-xs-12 col-sm-6 col-md-5 topicform fixed-right">
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 topicform" data-spy="affix" data-offset-top="270">
 	  	  <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= render 'form', topic: @newtopic %>
+</div>
 </div>
