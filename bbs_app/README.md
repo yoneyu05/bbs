@@ -65,16 +65,3 @@ circleCIツール
 ・記事DB
 名前 name string
 内容 content text NotNull
-
-
-！ページ遷移図！
-
-
-
-作るもの
-掲示板
-
-
-
-
-DB定義書

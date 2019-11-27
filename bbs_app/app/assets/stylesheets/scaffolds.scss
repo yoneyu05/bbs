@@ -82,3 +82,36 @@ div {
 label {
   display: block;
 }
+
+.topic_show{
+  display: table;
+  position: relative;
+    background: #95ccff;
+    box-shadow: 0px 0px 0px 5px #95ccff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+
+.table{
+  display: table;
+}
+
+.topic_form{
+   position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+    &:after{
+      position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
+}

@@ -1,3 +1,6 @@
+<div class="container">
+  <h1>BBS</h1>
+  <%= link_to 'ホーム', topics_path %>
 <% unless user_signed_in? %>
 <%= link_to '管理ユーザー登録', new_user_registration_path %>
 <%= link_to '管理ユーザーログイン', new_user_session_path %>
@@ -5,36 +8,40 @@
 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
 <% end %>
 
-<h1>Topics</h1>
 
+  	  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<div class="col-xs-12 col-sm-6 col-md-7">
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Name</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-
   <tbody>
     <%= will_paginate %>
+    <div class="topic_table">
+    	
+    
     <% @topics.each do |topic| %>
-      <tr>
-        <td><%= link_to topic.title, topics_show_path(topic.id) %></td>
-        <td><%= topic.name %></td>
-        <td><%= topic.content %></td>
+      <tr class="topic_show">
+      	<td><% if @topic.image? %>
+  <%= image_tag @topic.image.url %>
+<% end %></td>
+        <td class="table"><%= link_to topic.title, topics_show_path(topic.id) %></td>
+        <td class="table"><%= topic.content %></td>
+        <td class="table"><%= topic.name %></td>
+        
+        <td class="table"><%= topic.created_at %></td>
         <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="table"><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td class="table"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
+    </div>
     <%= will_paginate %>
+
   </tbody>
 </table>
-
+</div>
 <br>
-
+<div class="col-xs-12 col-sm-6 col-md-5 topic_form">
 <%= render 'form', topic: @topic %>
+</div>
+</div>
