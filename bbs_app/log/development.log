@@ -18648,3 +18648,351 @@ SyntaxError (/home/vagrant/products/bbs_app/app/views/delrequests/index.html.erb
           ^~~~~~):
   
 app/views/delrequests/index.html.erb:71: syntax error, unexpected ensure, expecting end-of-input
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (390.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (76.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTopics (20191119234755)
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `topics` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `name` varchar(255), `content` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (20.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191119234755')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20191119234822)
+  [1m[35m (44.0ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `content` text, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191119234822')[0m
+  [1m[35m (184.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddImageToPosts (20191120212059)
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE `posts` ADD `image` srting[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+Started GET "/" for 192.168.33.1 at 2019-11-28 18:07:35 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddImageToPosts (20191120212059)
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE `posts` ADD `image` srting[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddImageToPosts (20191120212059)
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE `posts` ADD `image` srting[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddImageToPosts (20191120212059)
+  [1m[35m (97.2ms)[0m  [1m[35mALTER TABLE `posts` ADD `image` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191120212059')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddImageToTopics (20191120212114)
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE `topics` ADD `image` srting[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddImageToTopics (20191120212114)
+  [1m[35m (44.4ms)[0m  [1m[35mALTER TABLE `topics` ADD `image` varchar(255)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191120212114')[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTopicToPosts (20191121232428)
+  [1m[35m (46.3ms)[0m  [1m[35mALTER TABLE `posts` ADD `topic_id` bigint[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE  INDEX `index_posts_on_topic_id`  ON `posts` (`topic_id`) [0m
+  [1m[35m (100.4ms)[0m  [1m[35mALTER TABLE `posts` ADD CONSTRAINT `fk_rails_70d0b6486a`
+FOREIGN KEY (`topic_id`)
+  REFERENCES `topics` (`id`)
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191121232428')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPostToTopics (20191121232510)
+  [1m[35m (51.1ms)[0m  [1m[35mALTER TABLE `topics` ADD `posts_id` bigint[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE  INDEX `index_topics_on_posts_id`  ON `topics` (`posts_id`) [0m
+  [1m[35m (90.0ms)[0m  [1m[35mALTER TABLE `topics` ADD CONSTRAINT `fk_rails_8f7d835d30`
+FOREIGN KEY (`posts_id`)
+  REFERENCES `posts` (`id`)
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191121232510')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20191124214631)
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (70.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191124214631')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDelrequests (20191127194832)
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE `delrequests` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `address` varchar(255), `del_id` varchar(255), `reason` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191127194832')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-11-28 09:12:43', '2019-11-28 09:12:43')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7692618944996633025', 0)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7692618944996633025')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 192.168.33.1 at 2019-11-28 18:25:44 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (65.0ms)
+  Rendered topics/index.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 1087ms (Views: 970.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-11-28 18:26:01 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jyNpuGmRCLphrGFWuPfRtTsDanV/PU2DuTlUR/BDFA1DSOSRQXeWVP22u0vx2vPVBFOXduXYONMqCQ5Rjux7jw==", "topic"=>{"title"=>"", "name"=>"", "content"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 18:26:01 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (8.0ms)
+  Rendered topics/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 132ms (Views: 128.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-11-28 18:26:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lrFh/eEEkx/5fHwhgVtVaVNrvyx/JSag7uTRK20+qFla2uzUyeIN8WVmpjzIdncJbDtCL+XAU/B91Is9E5HH2w==", "topic"=>{"title"=>"test", "name"=>"", "content"=>"test\r\ntest\r\ntest"}, "commit"=>"登録する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `topics` (`title`, `name`, `content`, `created_at`, `updated_at`) VALUES ('test', 'ネットエリートさん', 'test\r\ntest\r\ntest', '2019-11-28 09:26:22', '2019-11-28 09:26:22')[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 24ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 18:26:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (8.0ms)
+  Rendered topics/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 133ms (Views: 129.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-11-28 18:26:25 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 195ms (Views: 118.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/posts" for 192.168.33.1 at 2019-11-28 18:26:30 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AV3ZV7PDiCYSvUJ6zTvrrZvjono47x6MF27gH9SpExTNNlR+myUWyI6nmGeEFsnNpLNfeaIKa9yEXroJqgZ8lg==", "post"=>{"content"=>"test\r\ntest\r\ntest", "name"=>"", "topic_id"=>"1"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `name`, `created_at`, `updated_at`, `topic_id`) VALUES ('test\r\ntest\r\ntest', 'ネットエリートさん', '2019-11-28 09:26:30', '2019-11-28 09:26:30', 1)[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/topics/show/1
+Completed 302 Found in 50ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/topics/show/1" for 192.168.33.1 at 2019-11-28 18:26:30 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 119ms (Views: 113.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 18:27:39 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (6.9ms)
+  Rendered topics/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 123ms (Views: 119.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-11-28 18:27:40 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 165ms (Views: 157.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-11-28 18:28:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 162ms (Views: 155.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-11-28 18:31:50 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (9.5ms)
+  Rendered topics/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 147ms (Views: 143.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 18:31:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Parameters: {"authenticity_token"=>"w/5iHvtlrjy81DnfTdUFF0bGHSYO8Xu7CJVMYVtExG4Ple8304Mw0iDO48IE+Cd3eZbgJZQUDuubpRZ3Jeur7A=="}
+  Rendering delrequests/index.html.erb within layouts/application
+  Rendered delrequests/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/home/vagrant/products/bbs_app/app/views/delrequests/index.html.erb:71: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/delrequests/index.html.erb:71: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 18:34:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.4ms)[0m  [1m[34mSELECT `delrequests`.* FROM `delrequests`[0m
+  Rendered delrequests/_form.html.erb (6.7ms)
+  Rendered delrequests/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 123ms (Views: 119.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/delrequests" for 192.168.33.1 at 2019-11-28 18:35:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e3Geg03BV2+7MAvGbaiRhgarOEAroeFtn/4NBtJ5UFa3GhOqZSfJgScq0dskhbPmOfvFQ7FElD0MzlcQrNY/1A==", "delrequest"=>{"address"=>"test", "del_id"=>"test", "reason"=>"test"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `delrequests` (`address`, `del_id`, `reason`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test', '2019-11-28 09:35:21', '2019-11-28 09:35:21')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/delrequests/1
+Completed 302 Found in 20ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/delrequests/1" for 192.168.33.1 at 2019-11-28 18:35:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDelrequest Load (0.7ms)[0m  [1m[34mSELECT  `delrequests`.* FROM `delrequests` WHERE `delrequests`.`id` = 1 LIMIT 1[0m
+  Rendering delrequests/show.html.erb within layouts/application
+  Rendered delrequests/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 119ms (Views: 109.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 18:35:23 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT `delrequests`.* FROM `delrequests`[0m
+  Rendered delrequests/index.html.erb within layouts/application (921.1ms)
+Completed 500 Internal Server Error in 929ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `topic' for #<#<Class:0x00007f4cc8f92c68>:0x00007f4cd4423d30>
+Did you mean?  topic_url):
+    11:       	<td   colspan="2">
+    12:           <b><%= delrequest.address %></b>
+    13:           <%= delrequest.del_id %>
+    14:           <%= topic.created_at %>
+    15:         </td>
+    16:         </tr>
+    17:         <tr class="topicshow">
+  
+app/views/delrequests/index.html.erb:14:in `block in _app_views_delrequests_index_html_erb__1330660207067872494_69983977653040'
+app/views/delrequests/index.html.erb:7:in `_app_views_delrequests_index_html_erb__1330660207067872494_69983977653040'
+Started GET "/delrequests" for 192.168.33.1 at 2019-11-28 18:35:40 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.5ms)[0m  [1m[34mSELECT `delrequests`.* FROM `delrequests`[0m
+  Rendered delrequests/_form.html.erb (8.8ms)
+  Rendered delrequests/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 187ms (Views: 183.9ms | ActiveRecord: 0.5ms)
+
+

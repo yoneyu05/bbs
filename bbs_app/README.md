@@ -26,7 +26,7 @@ DBトランザクションの制御機能 ○
 
 webデザイン ○
 
-
+DBをmysqlに変える ○
 AWS
 Doocker
 circleCIツール
