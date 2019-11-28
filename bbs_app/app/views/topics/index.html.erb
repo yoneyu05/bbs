@@ -1,4 +1,4 @@
-<div class="container">
+
   <h1>BBS</h1>
   <%= link_to 'ホーム', topics_path %>
 <% unless user_signed_in? %>
@@ -8,9 +8,10 @@
 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
 <% end %>
 
+<br>
+<br>
+<br>
 
-  	  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 <div class="col-xs-12 col-sm-6 col-md-7">
 <table>
   <tbody>
@@ -18,21 +19,28 @@
     <div class="topic_table">
     	
     
+
+
+
+
     <% @topics.each do |topic| %>
-      <tr class="topic_show">
-      	<td><% if @topic.image? %>
-  <%= image_tag @topic.image.url %>
-<% end %></td>
-        <td class="table"><%= link_to topic.title, topics_show_path(topic.id) %></td>
-        <td class="table"><%= topic.content %></td>
-        <td class="table"><%= topic.name %></td>
-        
-        <td class="table"><%= topic.created_at %></td>
+    
+
+      <tr class="topicshow">
+      	<td class="center-block">
+          <%= link_to topics_show_path(topic.id) do %>
+            <b><%= topic.title %></b>
+            <%= topic.name %>
+            <%= topic.created_at %>
+          <% end %>
+        </td>
+      	<td class="center-block"><% if topic.image? %><%= link_to topics_show_path(topic.id) do %><%= image_tag topic.image.url %><% end %><% end %></td>
+        <td class="center-block"><%= link_to topics_show_path(topic.id) do %><%= topic.content.truncate(50) %><% end %></td>
         <% if user_signed_in? %>
-        <td class="table"><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td class="table"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td class="center-block"><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td class="center-block"><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
     </div>
     <%= will_paginate %>
@@ -41,7 +49,8 @@
 </table>
 </div>
 <br>
-<div class="col-xs-12 col-sm-6 col-md-5 topic_form">
-<%= render 'form', topic: @topic %>
-</div>
+<div class="col-xs-12 col-sm-6 col-md-5 topicform fixed-right">
+	  	  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<%= render 'form', topic: @newtopic %>
 </div>

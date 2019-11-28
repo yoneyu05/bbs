@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
      @topics = Topic.paginate(page: params[:page])
-     @topic = Topic.new
+     @newtopic = Topic.new
   end
 
   # GET /topics/1

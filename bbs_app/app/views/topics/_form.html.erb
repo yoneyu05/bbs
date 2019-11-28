@@ -1,9 +1,9 @@
-<%= form_with(model: @topic, local: true) do |form| %>
-  <% if @topic.errors.any? %>
+<%= form_with(model: @newtopic, local: true) do |form| %>
+  <% if @newtopic.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+      <h2><%= pluralize(@newtopic.errors.count, "error") %> prohibited this topic from being saved:</h2>
       <ul>
-      <% @topic.errors.full_messages.each do |message| %>
+      <% @newtopic.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

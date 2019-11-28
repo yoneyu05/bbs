@@ -83,7 +83,7 @@ label {
   display: block;
 }
 
-.topic_show{
+.topicshow{
   display: table;
   position: relative;
     background: #95ccff;
@@ -93,11 +93,11 @@ label {
     color: #454545;
 }
 
-.table{
-  display: table;
+.topicshow_td{
+  word-wrap: break-word;
 }
 
-.topic_form{
+.topicform{
    position: relative;
     background: #fff0cd;
     box-shadow: 0px 0px 0px 5px #fff0cd;
