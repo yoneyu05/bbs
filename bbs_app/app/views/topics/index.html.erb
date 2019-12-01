@@ -14,33 +14,35 @@
 
 <div class="row">
 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
-<table class="table table-condensed table-hover">
-  <tbody>
-    <%= will_paginate %>
     <% @topics.each do |topic| %>
+<table class="table table-condensed table-hover">
+    <%= will_paginate %>
+  <tbody>
+
         <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
-      	<td>
+      	<td   colspan="2">
           <b><%= topic.title %></b>
           <%= topic.name %>
           <%= topic.created_at %>
-          <% if topic.image? %>
-          <%= image_tag topic.image.url %>
-          <% end %>
         </td>
-        <td><%= topic.content.truncate(50) %></td>
         </tr>
+        <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
+          <% if topic.image? %>
+          <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><%= image_tag topic.image.url %></td>
+          <% end %>
+        <td><%= simple_format(topic.content.truncate(50)) %></td>
+        </tr>
+
         <% if user_signed_in? %>
         <tr>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
-
-      <% end %>
-    <% end %>
-    <%= will_paginate %>
-
   </tbody>
+      <% end %>
+    <%= will_paginate %>
 </table>
+    <% end %>
 </div>
 <br>
 
