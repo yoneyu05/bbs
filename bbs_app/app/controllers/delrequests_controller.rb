@@ -29,7 +29,7 @@ class DelrequestsController < ApplicationController
 
     respond_to do |format|
       if @delrequest.save
-        format.html { redirect_to @delrequest, notice: 'Delrequest was successfully created.' }
+        format.html { redirect_to delrequests_path, notice: '削除依頼を作成しました。' }
         format.json { render :show, status: :created, location: @delrequest }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class DelrequestsController < ApplicationController
   def destroy
     @delrequest.destroy
     respond_to do |format|
-      format.html { redirect_to delrequests_url, notice: 'Delrequest was successfully destroyed.' }
+      format.html { redirect_to delrequests_path, notice: 'Delrequest was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
