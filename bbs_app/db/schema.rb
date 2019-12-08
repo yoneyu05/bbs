@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20191127194832) do
 
-  create_table "delrequests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "delrequests", force: :cascade do |t|
     t.string "address"
     t.string "del_id"
     t.text "reason"
@@ -20,28 +20,13 @@ ActiveRecord::Schema.define(version: 20191127194832) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "content"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image"
-    t.bigint "topic_id"
-    t.index ["topic_id"], name: "index_posts_on_topic_id"
-  end
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'srting' for column 'image'
 
-  create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "title"
-    t.string "name"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image"
-    t.bigint "posts_id"
-    t.index ["posts_id"], name: "index_topics_on_posts_id"
-  end
+# Could not dump table "topics" because of following StandardError
+#   Unknown type 'srting' for column 'image'
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -53,6 +38,4 @@ ActiveRecord::Schema.define(version: 20191127194832) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "posts", "topics"
-  add_foreign_key "topics", "posts", column: "posts_id"
 end

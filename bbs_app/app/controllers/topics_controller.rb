@@ -21,11 +21,11 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topic_params)
     #debugger
     if @topic.name == ""
-      @topic.name = "ネットエリートさん"
+      @topic.name = "名無しさん"
     end
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to topics_path, notice: 'できたよ！' }
+        format.html { redirect_to topics_path, notice: '投稿できたよ。' }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { redirect_to topics_path, notice: 'タイトルは何か入れてね。' }

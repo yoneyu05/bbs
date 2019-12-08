@@ -8,23 +8,15 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
                      password_confirmation: "password")
   end
 
-    test "topic should be valid" do
-    assert @topic.valid?
-  end
+  test "should get topics" do
+  get topics_url
+  assert_response :success
+end
 
-      test "user should be valid" do
-    assert @user.valid?
-  end
-
-      test "contet should not be too long" do
-      	@topic.content = "a" * 10001
-    assert_not @topic.valid?
-  end
-
-  test "should get index" do
-    get topics_url
-    assert_response :success
-  end
+test "should get show" do
+get topics_show_url
+assert_response :success
+end
 
   test "should create topic" do
     assert_difference('Topic.count') do

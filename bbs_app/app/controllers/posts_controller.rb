@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.name == ""
-      @post.name = "ネットエリートさん"
+      @post.name = "名無しさん"
     end
     respond_to do |format|
       if @post.save

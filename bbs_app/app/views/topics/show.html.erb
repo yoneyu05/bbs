@@ -1,6 +1,5 @@
-<br><br>
-<div class="row">
     <br><br><br>
+<div class="row">
     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
         <table class="table table-condensed">
             <tbody>
@@ -24,10 +23,10 @@
                 <tr class="topicshow">
                     <% if user_signed_in? %>
                     <td>
-                        <%= link_to 'Edit', edit_topic_path(topic) %>
+                        <%= link_to 'Edit', edit_topic_path(@topic) %>
                     </td>
                     <td>
-                        <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <%= link_to 'Destroy', @topic, method: :delete, data: { confirm: 'Are you sure?' } %>
                     </td>
                 </tr>
                 </tr>
@@ -57,7 +56,7 @@
                 </tr>
                     <% else %>
                     <tr class="postshow">
-                    <td class="topic_td">
+                    <td class="topic_td" colspan="2">
                         <%= simple_format(post.content) %>
                     </td>
                     </tr>
@@ -65,10 +64,10 @@
                 <tr class="postshow">
                 <% if user_signed_in? %>
                     <td>
-                        <%= link_to 'Edit', edit_topic_path(topic) %>
+                        <%= link_to 'Edit', edit_topic_path(post) %>
                     </td>
                     <td>
-                        <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
                     </td>
                 </tr>
                 <% end %>

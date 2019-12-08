@@ -1,38 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<<<<<<< HEAD
-<h1>Delrequests</h1>
-=======
 <h1>削除依頼</h1>
->>>>>>> origin/master
 
 <div class="row">
 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
   <% @delrequests.each do |delrequest| %>
-<table class="table table-condensed table-hover">
+<table class="table table-condensed">
   <tbody>
         <tr class="topicshow">
-<<<<<<< HEAD
-      	<td   colspan="2">
-          <b><%= delrequest.address %></b>
-          <%= delrequest.del_id %>
-          <%= delrequest.created_at %>
-=======
       	<td colspan="2">
-          <%= delrequest.address %> の <%= delrequest.del_id %>
->>>>>>> origin/master
+          場所：<%= delrequest.address %> の <%= delrequest.del_id %>
         </td>
         </tr>
 
         <tr class="topicshow">
-          <td><%= delrequest.reason %></td>
+          <td colspan="2">理由：<%= delrequest.reason %></td>
         </tr>
         <tr class="topicshow">
-          <td><%= delrequest.created_at %></td>
+          <td  colspan="2"><%= delrequest.created_at %></td>
         </tr>
 
         <% if user_signed_in? %>
-        <tr>
+        <tr class="topicshow">
         <td><%= link_to 'Edit', edit_delrequest_path(delrequest) %></td>
         <td><%= link_to 'Destroy', delrequest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
@@ -44,7 +31,7 @@
 
 <br>
 
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 topicform" data-spy="affix" data-offset-top="270">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 topicform">
 	  	  <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= render 'form', delrequest: @delrequest %>

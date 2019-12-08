@@ -21,23 +21,12 @@ DBトランザクションの制御機能 ○
 管理ユーザ登録機能（ライブラリを使う）○
 管理ユーザログイン機能（認証系ライブラリを使う）○
 
-単体テスト機能（ライブラリを使う）
-統合テスト機能（ライブラリを使う）
-
 webデザイン ○
-
 DBをmysqlに変える ○
+
+単体テスト機能
+統合テスト機能
+
 AWS
 Doocker
 circleCIツール
-
-
-！DB定義書！
-・スレッドDB
-タイトル　thread string NotNull
-名前 name string
-内容 content text
-
-・記事DB
-名前 name string
-内容 content text NotNull
