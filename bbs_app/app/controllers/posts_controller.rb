@@ -1,33 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
-  def index
-    @post = Post.new(:topic_id => params[:id])
-    @topic = Topic.find(params[:id])
-    @posts = Post.where(topic_id: params[:id])
-  end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
-    @post = Post.new(:topic_id => params[:id])
-    @topic = Topic.find(params[:id])
-    @posts = Post.where(topic_id: params[:id])
-  end
-
-  # GET /posts/new
-  def new
-    @post = Post.new(:topic_id => params[:id])
-  end
-
   # GET /posts/1/edit
   def edit
   end
 
   # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
     if @post.name == ""
@@ -35,36 +13,29 @@ class PostsController < ApplicationController
     end
     respond_to do |format|
       if @post.save
-        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '投稿できたよ。' }
-        format.json { render :index, status: :created, location: @post }
+        format.html {redirect_to topics_show_path(@post.topic_id), notice: '投稿できたよ。' }
       else
-        format.html {redirect_to topics_show_path(params[:post]['topic_id']), notice: '内容を書いてね。' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html {redirect_to topics_show_path(@post.topic_id), notice: '内容を書いてね。' }
       end
     end
   end
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to posts_path }
-        format.json { render :show, status: :ok, location: @post }
+        format.html { redirect_to topics_show_path(@post.topic_id), notice: 'コメントを編集しました。'  }
       else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html {redirect_to topics_show_path(@post.topic_id), notice: 'コメントを編集できませんでした。' }
       end
     end
   end
 
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to topics_show_path(@post.topic_id), notice: 'コメントを削除しました。' }
     end
   end
 

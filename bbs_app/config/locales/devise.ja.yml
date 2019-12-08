@@ -73,6 +73,8 @@ ja:
     sessions:
       new:
         sign_in: "ログイン"
+      user:
+        signed_in: "ログインに成功しました"
     shared:
       links:
         back: "戻る"

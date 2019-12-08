@@ -4,17 +4,7 @@ class DelrequestsController < ApplicationController
   # GET /delrequests
   # GET /delrequests.json
   def index
-    @delrequests = Delrequest.all
-    @delrequest = Delrequest.new
-  end
-
-  # GET /delrequests/1
-  # GET /delrequests/1.json
-  def show
-  end
-
-  # GET /delrequests/new
-  def new
+    @delrequests = Delrequest.paginate(page: params[:page])
     @delrequest = Delrequest.new
   end
 
@@ -30,10 +20,8 @@ class DelrequestsController < ApplicationController
     respond_to do |format|
       if @delrequest.save
         format.html { redirect_to delrequests_path, notice: '削除依頼を作成しました。' }
-        format.json { render :show, status: :created, location: @delrequest }
       else
-        format.html { render :new }
-        format.json { render json: @delrequest.errors, status: :unprocessable_entity }
+        format.html { redirect_to delrequests_path, notice: '何か書いてください。'  }
       end
     end
   end
@@ -43,11 +31,9 @@ class DelrequestsController < ApplicationController
   def update
     respond_to do |format|
       if @delrequest.update(delrequest_params)
-        format.html { redirect_to @delrequest, notice: 'Delrequest was successfully updated.' }
-        format.json { render :show, status: :ok, location: @delrequest }
+        format.html { redirect_to delrequests_path, notice: '削除依頼を更新しました。' }
       else
-        format.html { render :edit }
-        format.json { render json: @delrequest.errors, status: :unprocessable_entity }
+        format.html {  redirect_to delrequests_path, notice: '削除依頼を更新できませんでした。' }
       end
     end
   end
@@ -57,8 +43,7 @@ class DelrequestsController < ApplicationController
   def destroy
     @delrequest.destroy
     respond_to do |format|
-      format.html { redirect_to delrequests_path, notice: 'Delrequest was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to delrequests_path, notice: '削除依頼を削除しました。' }
     end
   end
 
