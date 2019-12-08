@@ -68,6 +68,8 @@ ja:
         we_need_your_current_password_to_confirm_your_changes: "変更を反映するには現在のパスワードを入力してください"
       new:
         sign_up: "アカウント登録"
+      user:
+        signed_up: "ログインに成功しました"
     sessions:
       new:
         sign_in: "ログイン"
@@ -83,3 +85,7 @@ ja:
     unlocks:
       new:
         resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
+    failure:
+      user:
+        invalid: "・正しいメールアドレスとパスワードを入力してください"
+        not_found_in_database: "・正しいメールアドレスとパスワードを入力してください"

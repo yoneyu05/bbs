@@ -21616,3 +21616,1446 @@ Processing by DelrequestsController#index as HTML
   Rendered layouts/_header.html.erb (0.9ms)
 Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.9ms)
 >>>>>>> origin/master
+Started GET "/" for 192.168.33.1 at 2019-12-09 02:28:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (57.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (154.6ms)
+  Rendered topics/index.html.erb within layouts/application (168.9ms)
+  Rendered layouts/_header.html.erb (9.1ms)
+Completed 200 OK in 2225ms (Views: 1690.1ms | ActiveRecord: 239.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:27 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (9.2ms)
+  Rendered topics/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-12-09 02:28:29 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Parameters: {"authenticity_token"=>"2mvi4bfvNgive1sZYcwYUhExNBfXmKRkJB9iEYp2l3KFVRegkDZgwrXbM3MiiahExyGQJcOkgscqDhNirJyzvA=="}
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.4ms)[0m  [1m[34mSELECT `delrequests`.* FROM `delrequests`[0m
+  Rendered delrequests/_form.html.erb (4.0ms)
+  Rendered delrequests/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 138ms (Views: 97.8ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:32 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (4.9ms)
+  Rendered topics/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-12-09 02:28:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FdlsRENQf+YuHtqIc+Jty3aW+gqhpPNciteGT7Hz0Nf9fkCKyeASdNY0uv6ILZXw0buMTs9sKwnstX2xeTNbLw==", "topic"=>{"title"=>"test", "name"=>"", "content"=>"test"}, "commit"=>"登録する"}
+  [1m[35m (21.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (253.0ms)[0m  [1m[32mINSERT INTO `topics` (`title`, `name`, `content`, `created_at`, `updated_at`) VALUES ('test', '名無しさん', 'test', '2019-12-08 17:28:37', '2019-12-08 17:28:37')[0m
+  [1m[35m (245.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 537ms (ActiveRecord: 520.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:38 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (4.2ms)
+  Rendered topics/index.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 99ms (Views: 94.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-12-09 02:28:39 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 205ms (Views: 89.2ms | ActiveRecord: 34.9ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-12-09 02:28:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FnrcYzH7z+LgcL5/MrbC/8/LokLsH7SnliDT0UHVhVxJRCkiFiKZKPrQ1hVx83LpGdsGcPgjkgSYMaKiZz+hkg==", "topic"=>{"title"=>"test", "name"=>"", "content"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `topics` (`title`, `name`, `content`, `created_at`, `updated_at`) VALUES ('test', '名無しさん', '', '2019-12-08 17:28:45', '2019-12-08 17:28:45')[0m
+  [1m[35m (98.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 105ms (ActiveRecord: 98.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (4.6ms)
+  Rendered topics/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/topics" for 192.168.33.1 at 2019-12-09 02:28:46 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"avbnDMNRruYQ+jwFzdjdYBmaAf2C3G++m/kIpgYbbuM1yBJN5Ij4LApaVG+OnW12z4qlz5bgSR2V6HnVIPFKLQ==", "topic"=>{"title"=>"", "name"=>"", "content"=>""}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://192.168.33.10:3000/topics
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:46 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (3.8ms)
+  Rendered topics/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-12-09 02:28:48 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 69.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/posts" for 192.168.33.1 at 2019-12-09 02:28:49 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c54HMJRrbTMyFFyePF5PLRzCVmt8dKh0ZhIEr9kkhNksoPJxs7I7+Si0NPR/G/87ytLyWWhIjtdoA3Xc/86gFw==", "post"=>{"content"=>"", "name"=>"", "topic_id"=>"1"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://192.168.33.10:3000/topics/show/1
+Completed 302 Found in 109ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/show/1" for 192.168.33.1 at 2019-12-09 02:28:49 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/posts" for 192.168.33.1 at 2019-12-09 02:28:53 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ge85FM8/eBZEQfpXIbw1If1oAW2KjmkREpqkyzEx4YxG0cxV6OYu3F7hkj1i+YU3K3ilX56yT7Ici9W4F9vFQg==", "post"=>{"content"=>"test", "name"=>"", "topic_id"=>"1"}, "commit"=>"登録する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `name`, `created_at`, `updated_at`, `topic_id`) VALUES ('test', '名無しさん', '2019-12-08 17:28:53', '2019-12-08 17:28:53', 1)[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/topics/show/1
+Completed 302 Found in 19ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/topics/show/1" for 192.168.33.1 at 2019-12-09 02:28:53 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:28:57 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (4.1ms)
+  Rendered topics/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-12-09 02:34:03 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 53.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:34:09 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (7.1ms)
+  Rendered topics/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 192.168.33.1 at 2019-12-09 02:34:13 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 2 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 2 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 59.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:34:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (4.9ms)
+  Rendered topics/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:34:27 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (5.8ms)
+  Rendered topics/index.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 64.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:37:12 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (65.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 443ms (Views: 191.6ms | ActiveRecord: 179.6ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:40:26 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h229EcZLTIUPIXT0T314CnlEEa4OEo+3EAsYhhFptah/HxFCHBXzVUHqXh5TEdGhw23zD+CszOSbg63JjGROQA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h229EcZLTIUPIXT0T314CnlEEa4OEo+3EAsYhhFptah/HxFCHBXzVUHqXh5TEdGhw23zD+CszOSbg63JjGROQA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 190ms (Views: 187.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:40:42 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDrCxQ1YV8OtVMcBPnTT0ucnC75mSWJFfn6KIicfM3aXBDeEKoEBCbf0r2t9MWPEMTevjHJ1ROZwb/tRAfUXuA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDrCxQ1YV8OtVMcBPnTT0ucnC75mSWJFfn6KIicfM3aXBDeEKoEBCbf0r2t9MWPEMTevjHJ1ROZwb/tRAfUXuA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 110ms (Views: 107.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:41:36 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:41:39 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/s4HAYEFOljTDBPuVDZTvfU5iomABScHe5y8p3+dMAih8PJAptxsksmse4QXc+OrIykuu5Q5AaR1jc3UWXcUxg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/s4HAYEFOljTDBPuVDZTvfU5iomABScHe5y8p3+dMAih8PJAptxsksmse4QXc+OrIykuu5Q5AaR1jc3UWXcUxg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:43:52 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (143.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 633ms (Views: 465.5ms | ActiveRecord: 149.7ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:43:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTiLu8qK1iBzZ2cGqGZtS8L7TwNqYWg9fEO4OErD6W/KBn767VOA6mnHD2zrI91dFOvrMX5dTp5yUslLbCnNoQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTiLu8qK1iBzZ2cGqGZtS8L7TwNqYWg9fEO4OErD6W/KBn767VOA6mnHD2zrI91dFOvrMX5dTp5yUslLbCnNoQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 135ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:45:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (9.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (26.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (138.2ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 1068ms (Views: 1028.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:45:59 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4QNo1QLhzWKs07rqyAr9Szvp3LYxUP8FXKoZkrf6e7e+PZ2UJTibqLZz0oCLT01d7fl4hCVs2aZSu2jhkRBfeQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4QNo1QLhzWKs07rqyAr9Szvp3LYxUP8FXKoZkrf6e7e+PZ2UJTibqLZz0oCLT01d7fl4hCVs2aZSu2jhkRBfeQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:47:13 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 124ms (Views: 122.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 192.168.33.1 at 2019-12-09 02:47:23 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 148ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 192.168.33.1 at 2019-12-09 02:47:25 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVRG/jwoq8E26Nb8ef5ZrqG+Lpvry9jWX0Xw6hdVPAoKp+6tPtmiacn2jtPlP7i4SiliuF3RpQEuCZ0r1R1W/Q==", "user"=>{"email"=>""}, "commit"=>"Send me reset password instructions"}
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 99ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 192.168.33.1 at 2019-12-09 02:47:34 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B3pD6B8MQWSVZUAQW9kFdL8JNScLWObhqmF1XZSJNAFYRLapONUXro/FKHoYnLViaRmRFR9kwEKkcAQusmMQzw==", "user"=>{"email"=>"aaa@aaa"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (87.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aaa@aaa' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 296ms (Views: 112.5ms | ActiveRecord: 87.9ms)
+
+
+Started GET "/users/password" for 192.168.33.1 at 2019-12-09 02:47:41 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users/password"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:47:44 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:47:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RqPol9DhLqujuLRrqsdJZKjots3kptV+fE194+mKNLa+0UTECr+Re+1znoG2q+DPEsFUbAoYli33xcisdIfPXg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RqPol9DhLqujuLRrqsdJZKjots3kptV+fE194+mKNLa+0UTECr+Re+1znoG2q+DPEsFUbAoYli33xcisdIfPXg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:49:21 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:49:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SqWyc3kZxA2dQVEOe5i8nkEqoW61zYK/AINEGi3YsdkVm0cyXsCSx4fhOWQ43QyIlzoFXKHxpBwOkjVpCzKVFw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SqWyc3kZxA2dQVEOe5i8nkEqoW61zYK/AINEGi3YsdkVm0cyXsCSx4fhOWQ43QyIlzoFXKHxpBwOkjVpCzKVFw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:49:35 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (116.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 534ms (Views: 500.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:49:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r9VL0j8yBIDMvBEc4zMYGxm38gNaQuQEe5sJVimmssXw676TGOtSStYceXagdqgNz6dWMU5+wqd1inglD0yWCw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r9VL0j8yBIDMvBEc4zMYGxm38gNaQuQEe5sJVimmssXw676TGOtSStYceXagdqgNz6dWMU5+wqd1inglD0yWCw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:50:42 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (184.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 657ms (Views: 621.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:50:44 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lxa0ig7S9Sg0dV7AKRTnF5THH3Y5sddcW7RjNE+oVrzIKEHLKQuj4i7VNqpqUVcBQte7RC2N8f9VpRJHaUJycg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lxa0ig7S9Sg0dV7AKRTnF5THH3Y5sddcW7RjNE+oVrzIKEHLKQuj4i7VNqpqUVcBQte7RC2N8f9VpRJHaUJycg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 02:50:48 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:51:08 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V92CfUMANMlD65Zv+cEEpCIt3Hj2h54e4n2d+j/i1alPtqhMz6pFKkUrXepuCRfoG4eB55Pp+P2oI11TioZ8rw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (37.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 147ms (Views: 86.7ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/users" for 192.168.33.1 at 2019-12-09 02:52:12 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:52:15 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6BU6yc1Obx2zj0PJMfFy9uXqa7f1gW9/KLWygxUqdcC3K8+I6pc516kvK6NytMLgM/rPheG9SdwmpMPwM8BRDg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 154ms (Views: 80.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:52:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6BU6yc1Obx2zj0PJMfFy9uXqa7f1gW9/KLWygxUqdcC3K8+I6pc516kvK6NytMLgM/rPheG9SdwmpMPwM8BRDg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 299ms (Views: 73.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:53:48 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.9ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (22.8ms)
+  Rendered topics/index.html.erb within layouts/application (71.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 252ms (Views: 150.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 02:53:49 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 75ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:53:50 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jMDa6ldwiEw8vAZdh58aYkpqvT9BXVNh5r3zpOhlLJOUq/Db29r5rzp8zdgQVwkuc8DgoCQzNYKs4zMNXQGFlQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 192.168.33.1 at 2019-12-09 02:56:29 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 02:56:32 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:56:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QwMAjl5WJgPP7QGcdcokem1vTBA8glEJII7Azt8wsBxbaCq/0vxX4MktyhniAjc2VMURj1nsN+pq0ABnalQZGg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 60.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:56:40 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:56:43 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+McRH86bk95UXeKbuNYI00GGMpFzGee7nRdgWkyjKnYAtb1MFMUsDhqWyHGkuqF4+6/QMJ2npOgWn9UV0a7Rng==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+McRH86bk95UXeKbuNYI00GGMpFzGee7nRdgWkyjKnYAtb1MFMUsDhqWyHGkuqF4+6/QMJ2npOgWn9UV0a7Rng==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:59:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (102.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 211ms (Views: 198.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 02:59:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o7bezaEJ+SecUOgJJDS5n8IPdcGwvyxZIkyIheC/cI/8iCuMhtCv7YbwgGNncQmJFB/R86SDCvosXfn2xlVUQQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o7bezaEJ+SecUOgJJDS5n8IPdcGwvyxZIkyIheC/cI/8iCuMhtCv7YbwgGNncQmJFB/R86SDCvosXfn2xlVUQQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 02:59:33 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (3.9ms)
+  Rendered topics/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 86ms (Views: 62.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 02:59:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 02:59:57 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NZ8E0rGB04Zc1Gy+gc73Gml9Q0sb5bBnam2mLGWAzdUt9C7jPSuiZVoUpzsWBuRWUNce1H6L1oQgM2aF0ORk0w==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 03:00:00 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 03:00:02 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"15K2mDT3mnLkg1YIOP28B6LTJ21xZLT+ky01uu09+ZYv4BrL7qkloqpIfOIkkRWsGPrFzJ/a960YpYD1cDACfg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"15K2mDT3mnLkg1YIOP28B6LTJ21xZLT+ky01uu09+ZYv4BrL7qkloqpIfOIkkRWsGPrFzJ/a960YpYD1cDACfg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 03:00:05 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (3.5ms)
+  Rendered topics/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 03:00:15 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 03:00:19 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xZuzqwTZ9fGh2CSFPr2UccisWFwbpo7Ht/O6wuIU5nY96R/43odKIe8TDm8i0T3acoW6/fUYzZQ8ew+Nfxkdng==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xZuzqwTZ9fGh2CSFPr2UccisWFwbpo7Ht/O6wuIU5nY96R/43odKIe8TDm8i0T3acoW6/fUYzZQ8ew+Nfxkdng==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 03:00:58 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 07:55:15 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ipbzf5RooTW5t+1C7cn6TpY5HyWCL3xPV2Zi0wc4v4x9qAY+s7H3/6MXhSiujEpYQCm7F5YTWuxZdxOgIdKbQg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ipbzf5RooTW5t+1C7cn6TpY5HyWCL3xPV2Zi0wc4v4x9qAY+s7H3/6MXhSiujEpYQCm7F5YTWuxZdxOgIdKbQg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 07:55:31 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 07:55:33 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5mm+FHBZzk0P424T00bUESo3caaPAmWG5THYFC1fX84p1O5dhgx8y6f5dIMCKtGkrh59I4ALzUVhbYTdl9ZsQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5mm+FHBZzk0P424T00bUESo3caaPAmWG5THYFC1fX84p1O5dhgx8y6f5dIMCKtGkrh59I4ALzUVhbYTdl9ZsQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:05:31 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeKmT/dhLr56R2rbHM0FAD/JagS0zUgU18t2fxaJ75Zm3FMO0Lh4dGDnArFfiLUW6dnONqDxbrfZ2gcMMGPLWA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeKmT/dhLr56R2rbHM0FAD/JagS0zUgU18t2fxaJ75Zm3FMO0Lh4dGDnArFfiLUW6dnONqDxbrfZ2gcMMGPLWA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 428ms (Views: 407.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:10:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:10:23 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWU+cVbBTrEMcJ0Pleox4x+yJUNBGM+9BJvfPG8w5ONaW8swcRgYexbQ9WXWr4H1yaKBcVUk6R4Kiq5PSdrALQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWU+cVbBTrEMcJ0Pleox4x+yJUNBGM+9BJvfPG8w5ONaW8swcRgYexbQ9WXWr4H1yaKBcVUk6R4Kiq5PSdrALQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:16:04 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (5.6ms)
+  Rendered topics/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 114ms (Views: 66.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-12-09 08:16:06 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 190ms (Views: 85.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:19:05 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:19:15 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ITAmx1vPv67WYCEz/6NEMpllcPqzYJp1zYvre3lqdFjZQoqUgZEAfpirC9njz+2ZI0ySW13e2SZGA1405GePsA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ITAmx1vPv67WYCEz/6NEMpllcPqzYJp1zYvre3lqdFjZQoqUgZEAfpirC9njz+2ZI0ySW13e2SZGA1405GePsA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 449ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:19:59 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dmjq1SvuVDi7evgH6R5v/B1ACoLYEDpF2rExZdflNN8pVh+UDDcC8qHakG2qW9/qy1CusMwsHObUoEAW8Q8QEQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.5ms)
+
+
+  
+I18n::InvalidLocaleData (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+  
+i18n (1.7.0) lib/i18n/backend/base.rb:244:in `rescue in load_yml'
+i18n (1.7.0) lib/i18n/backend/base.rb:240:in `load_yml'
+i18n (1.7.0) lib/i18n/backend/base.rb:225:in `load_file'
+i18n (1.7.0) lib/i18n/backend/base.rb:18:in `block in load_translations'
+i18n (1.7.0) lib/i18n/backend/base.rb:18:in `each'
+i18n (1.7.0) lib/i18n/backend/base.rb:18:in `load_translations'
+i18n (1.7.0) lib/i18n/backend/simple.rb:80:in `init_translations'
+i18n (1.7.0) lib/i18n/backend/simple.rb:50:in `available_locales'
+i18n (1.7.0) lib/i18n/config.rb:45:in `available_locales'
+i18n (1.7.0) lib/i18n/config.rb:51:in `available_locales_set'
+i18n (1.7.0) lib/i18n.rb:320:in `locale_available?'
+i18n (1.7.0) lib/i18n.rb:326:in `enforce_available_locales!'
+i18n (1.7.0) lib/i18n.rb:182:in `translate'
+activemodel (5.1.7) lib/active_model/translation.rb:65:in `human_attribute_name'
+devise (4.5.0) lib/devise/failure_app.rb:106:in `block in i18n_message'
+devise (4.5.0) lib/devise/failure_app.rb:106:in `map'
+devise (4.5.0) lib/devise/failure_app.rb:106:in `i18n_message'
+devise (4.5.0) lib/devise/failure_app.rb:73:in `recall'
+devise (4.5.0) lib/devise/failure_app.rb:41:in `respond'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:242:in `block in action'
+devise (4.5.0) lib/devise/failure_app.rb:23:in `call'
+devise (4.5.0) lib/devise/delegator.rb:7:in `call'
+warden (1.2.8) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.8) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.8) lib/warden/manager.rb:44:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:20:02 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (57.3ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    4:        <p class="alert"><%= alert %></p>
+    5: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    6:   <div class="field">
+    7:     <%= f.label :email %><br />
+    8:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    9:   </div>
+   10: 
+  
+app/views/devise/sessions/new.html.erb:7:in `block in _app_views_devise_sessions_new_html_erb__2792658898374655519_69928394770440'
+app/views/devise/sessions/new.html.erb:5:in `_app_views_devise_sessions_new_html_erb__2792658898374655519_69928394770440'
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:20:06 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (52.4ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    4:        <p class="alert"><%= alert %></p>
+    5: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    6:   <div class="field">
+    7:     <%= f.label :email %><br />
+    8:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    9:   </div>
+   10: 
+  
+app/views/devise/sessions/new.html.erb:7:in `block in _app_views_devise_sessions_new_html_erb__2792658898374655519_69928393878980'
+app/views/devise/sessions/new.html.erb:5:in `_app_views_devise_sessions_new_html_erb__2792658898374655519_69928393878980'
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:20:11 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (45.9ms)
+  Rendered topics/index.html.erb within layouts/application (50.7ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    11:   <% end %>
+    12: 
+    13:   <div class="field">
+    14:     <%= form.label :タイトル %>
+    15:     <%= form.text_field :title, id: :topic_title %>
+    16:   </div>
+    17: 
+  
+app/views/topics/_form.html.erb:14:in `block in _app_views_topics__form_html_erb__415861727776485201_69928393624340'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__415861727776485201_69928393624340'
+app/views/topics/index.html.erb:39:in `_app_views_topics_index_html_erb___2099744939762115473_69928393556240'
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:20:25 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (96.6ms)
+  Rendered topics/index.html.erb within layouts/application (110.3ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    11:   <% end %>
+    12: 
+    13:   <div class="field">
+    14:     <%= form.label :タイトル %>
+    15:     <%= form.text_field :title, id: :topic_title %>
+    16:   </div>
+    17: 
+  
+app/views/topics/_form.html.erb:14:in `block in _app_views_topics__form_html_erb___2228806617017335306_47247080173420'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2228806617017335306_47247080173420'
+app/views/topics/index.html.erb:39:in `_app_views_topics_index_html_erb__2295809207181917744_47247079507400'
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:20:28 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (65.8ms)
+  Rendered topics/index.html.erb within layouts/application (70.3ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    11:   <% end %>
+    12: 
+    13:   <div class="field">
+    14:     <%= form.label :タイトル %>
+    15:     <%= form.text_field :title, id: :topic_title %>
+    16:   </div>
+    17: 
+  
+app/views/topics/_form.html.erb:14:in `block in _app_views_topics__form_html_erb___2228806617017335306_47247079118200'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2228806617017335306_47247079118200'
+app/views/topics/index.html.erb:39:in `_app_views_topics_index_html_erb__2295809207181917744_47247079047540'
+Started GET "/" for 192.168.33.1 at 2019-12-09 08:20:37 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (9.7ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (144.7ms)
+  Rendered topics/index.html.erb within layouts/application (169.2ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/vagrant/bbs_app/config/locales/devise.ja.yml: #<Psych::SyntaxError: (/home/vagrant/bbs_app/config/locales/devise.ja.yml): could not find expected ':' while scanning a simple key at line 89 column 9>):
+    11:   <% end %>
+    12: 
+    13:   <div class="field">
+    14:     <%= form.label :タイトル %>
+    15:     <%= form.text_field :title, id: :topic_title %>
+    16:   </div>
+    17: 
+  
+app/views/topics/_form.html.erb:14:in `block in _app_views_topics__form_html_erb___2228806617017335306_47247072118800'
+app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb___2228806617017335306_47247072118800'
+app/views/topics/index.html.erb:39:in `_app_views_topics_index_html_erb__2295809207181917744_47247068604220'
+Started GET "/" for 192.168.33.1 at 2019-12-09 08:20:51 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (3.7ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered topics/_form.html.erb (115.5ms)
+  Rendered topics/index.html.erb within layouts/application (124.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 868ms (Views: 819.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 08:20:55 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 82ms (Views: 63.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:20:56 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:20:59 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g25dMSQc+dD+ns4TfJNoFRVm/II/n/DZCPlmKsFoOoZ7HPFi/kJGALBV5Plg/8G+r08eI9Ehs4qDcdNlXGXBbg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g25dMSQc+dD+ns4TfJNoFRVm/II/n/DZCPlmKsFoOoZ7HPFi/kJGALBV5Plg/8G+r08eI9Ehs4qDcdNlXGXBbg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.33.1 at 2019-12-09 08:21:04 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1SIqxZp4gMqVlT9m6on3iK/Lu3tE9Yzb6JwI3efWH9wan3qMbC0yTD2PJfY75fI9K+K3/kv8JBhswFQUXV8sQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1SIqxZp4gMqVlT9m6on3iK/Lu3tE9Yzb6JwI3efWH9wan3qMbC0yTD2PJfY75fI9K+K3/kv8JBhswFQUXV8sQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 212ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2019-12-09 08:21:05 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.33.1 at 2019-12-09 08:21:13 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yTMMmn3jTOfxjuz1Jm/yPn4C+KGYTaY51CVwgMR7VrXRWCar8Uk9BPdOJ3Cxp+FyR6ilPv0jwNqee7ApcR//sw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (42.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'test@test.com' LIMIT 1[0m
+  [1m[35mSQL (44.9ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('test@test.com', '$2a$11$moTmsCLBaR6H3CxkpW.xQeQMf5AcoCXWAqtPOCpyX7j4zvLr/ERj6', '2019-12-08 23:21:13', '2019-12-08 23:21:13')[0m
+  [1m[35m (138.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.33.10:3000/
+Completed 302 Found in 422ms (ActiveRecord: 225.9ms)
+
+
+Started GET "/" for 192.168.33.1 at 2019-12-09 08:21:14 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (2.1ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (3.4ms)
+  Rendered topics/index.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 84.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/topics/2" for 192.168.33.1 at 2019-12-09 08:22:42 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 2 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 2 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (75.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 165ms (Views: 127.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:22:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (5.7ms)
+  Rendered topics/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 110ms (Views: 107.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/1" for 192.168.33.1 at 2019-12-09 08:22:45 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (1.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 1 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 1 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 138ms (Views: 126.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:22:48 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (3.2ms)
+  Rendered topics/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/topics/2" for 192.168.33.1 at 2019-12-09 08:22:49 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 2 ORDER BY `topics`.`created_at` DESC LIMIT 1[0m
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`topic_id` = 2 ORDER BY `posts`.`id` ASC[0m
+  Rendered topics/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 84.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:22:50 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (1.8ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (4.6ms)
+  Rendered topics/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2019-12-09 08:22:52 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Parameters: {"authenticity_token"=>"o8htRfvDAE2pa8/fz3OLUkz0xsmRrOEk/OUfLB4rGuT89pgE3BpWh7PLp7WMNjtEmuRi+4WQx4fy9G5fOME+Kg=="}
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.3ms)[0m  [1m[34mSELECT `delrequests`.* FROM `delrequests`[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered delrequests/_form.html.erb (3.6ms)
+  Rendered delrequests/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 93ms (Views: 64.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:22:54 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (4.7ms)
+  Rendered topics/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2019-12-09 08:34:30 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (74.2ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered topics/_form.html.erb (8.1ms)
+  Rendered topics/index.html.erb within layouts/application (99.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 370ms (Views: 286.8ms | ActiveRecord: 80.7ms)
+
+
+  [1m[35m (19.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
