@@ -1,3 +1,3 @@
 test:
   email: test@test.com
-  password: testtest
+  encrypted_password: zarigani

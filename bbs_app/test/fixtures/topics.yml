@@ -1,4 +1,5 @@
 test:
   name: "test"
-  content: "test"
-  id: 99
+  title: "test"
+  content: "test" 
+  id: 999
