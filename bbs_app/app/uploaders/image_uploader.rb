@@ -23,7 +23,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process resize_to_fill: [200, 200, "Center"]
   end
-  
+
 # jpg,jpeg,gif,pngのみ
   def extension_white_list
     %w(jpg jpeg gif png)
@@ -31,7 +31,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
 #ファイル名を変更し拡張子を同じにする
   def filename
-    super.chomp(File.extname(super)) + '.jpg' 
+    super.chomp(File.extname(super)) + '.jpg'
   end
 
 #日付で保存

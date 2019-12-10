@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :topics
   root 'topics#index'
   get 'topics/show/:id' => 'topics#show', as: :topics_show
+  get 'topics/search' => 'topics#search'
 end

@@ -4,7 +4,7 @@ class DelrequestsController < ApplicationController
   # GET /delrequests
   # GET /delrequests.json
   def index
-    @delrequests = Delrequest.all
+    @delrequests = Delrequest.paginate(page: params[:page])
     @delrequest = Delrequest.new
   end
 
@@ -19,7 +19,7 @@ class DelrequestsController < ApplicationController
       if @delrequest.save
         format.html { redirect_to delrequests_path, notice: '削除依頼を作成しました。' }
       else
-        format.html { redirect_to delrequests_path, notice: '削除依頼を作成できませんでした。' }
+        format.html { redirect_to delrequests_path, notice: '何か書いてください。'  }
       end
     end
   end
@@ -30,7 +30,7 @@ class DelrequestsController < ApplicationController
       if @delrequest.update(delrequest_params)
         format.html { redirect_to delrequests_path, notice: '削除依頼を更新しました。' }
       else
-        format.html { redirect_to delrequests_path, notice: '削除依頼を更新できませんでした。' }
+        format.html {  redirect_to delrequests_path, notice: '削除依頼を更新できませんでした。' }
       end
     end
   end

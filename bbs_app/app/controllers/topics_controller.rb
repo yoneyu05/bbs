@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy, :search]
 
   # GET /topics
   def index
@@ -44,8 +44,14 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_path, notice: 'トピックを削除しました。'  }
+      format.html { redirect_to topics_path, notice: 'トピックを削除しました。' }
     end
+  end
+
+  #検索機能
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @topics = Topic.search(params[:search])
   end
 
   private

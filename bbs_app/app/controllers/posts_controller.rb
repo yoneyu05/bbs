@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     end
     respond_to do |format|
       if @post.save
-        format.html {redirect_to topics_show_path(@post.topic_id), notice: 'コメントを投稿できたよ。' }
+        format.html {redirect_to topics_show_path(@post.topic_id), notice: '投稿できたよ。' }
       else
         format.html {redirect_to topics_show_path(@post.topic_id), notice: '内容を書いてね。' }
       end
