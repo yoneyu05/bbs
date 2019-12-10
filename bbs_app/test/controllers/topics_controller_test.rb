@@ -23,23 +23,23 @@ end
     assert_redirected_to topics_path
   end
 
-  # test "should show topic" do
-  #   post topics_url, params: { topic: { content: @topic.content, name: @topic.name, title: @topic.title, id: @topic.id} }
-  #   get topics_show_url(@topic.id), params: { id: @topic.id }, headers: { "HTTP_REFERER" => "http://example.com/topic/show" }
-  #   assert_response :success
-  # end
+  test "should show topic" do
+    post topics_url, params: { topic: { content: @topic.content, name: @topic.name, title: @topic.title, id: @topic.id} }
+    get topics_show_url(@topic.id), params: { id: @topic.id }, headers: { "HTTP_REFERER" => "http://example.com/topic/show" }
+    assert_response :success
+  end
 
-  # test "should update topic" do
-  #   patch topic_url(@topic), params: { topic: { content: @topic.content, name: @topic.name, title: @topic.title} }
-  #   assert_redirected_to topic_url(@topic)
-  # end
+  test "should update topic" do
+    patch topic_url(@topic), params: { topic: { content: @topic.content, name: @topic.name, title: @topic.title} }
+    assert_redirected_to topic_url(@topic)
+  end
 
-  # test "should destroy topic" do
-  #   assert_difference('Topic.count', -1) do
-  #     delete topic_url(@topic)
-  #   end
+  test "should destroy topic" do
+    assert_difference('Topic.count', -1) do
+      delete topic_url(@topic)
+    end
 
-  #   assert_redirected_to topics_url
-  # end
+    assert_redirected_to topics_url
+  end
 
 end

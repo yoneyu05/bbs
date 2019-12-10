@@ -2,21 +2,18 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
-  # GET /topics.json
   def index
      @topics = Topic.paginate(page: params[:page])
      @newtopic = Topic.new
   end
 
   # GET /topics/1
-  # GET /topics/1.json
   def show
     @post = Post.new(:topic_id => params[:id])
     @posts = Post.where(topic_id: params[:id])
   end
 
   # POST /topics
-  # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
     #debugger
@@ -26,35 +23,28 @@ class TopicsController < ApplicationController
     respond_to do |format|
       if @topic.save
         format.html { redirect_to topics_path, notice: '投稿できたよ。' }
-        format.json { render :show, status: :created, location: @topic }
       else
         format.html { redirect_to topics_path, notice: 'タイトルは何か入れてね。' }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /topics/1
-  # PATCH/PUT /topics/1.json
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
-        format.json { render :show, status: :ok, location: @topic }
+        format.html { redirect_to @topic, notice: 'トピックを更新しました。' }
       else
-        format.html { render :edit }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
+        format.html { redirect_to @topic, notice: 'トピックを更新できませんでした。' }
       end
     end
   end
 
   # DELETE /topics/1
-  # DELETE /topics/1.json
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_path, notice: 'Topic was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to topics_path, notice: 'トピックを削除しました。'  }
     end
   end
 

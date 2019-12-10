@@ -8,57 +8,38 @@ class DelrequestsController < ApplicationController
     @delrequest = Delrequest.new
   end
 
-  # GET /delrequests/1
-  # GET /delrequests/1.json
-  def show
-  end
-
-  # GET /delrequests/new
-  def new
-    @delrequest = Delrequest.new
-  end
-
   # GET /delrequests/1/edit
   def edit
   end
 
   # POST /delrequests
-  # POST /delrequests.json
   def create
     @delrequest = Delrequest.new(delrequest_params)
-
     respond_to do |format|
       if @delrequest.save
         format.html { redirect_to delrequests_path, notice: '削除依頼を作成しました。' }
-        format.json { render :show, status: :created, location: @delrequest }
       else
-        format.html { render :new }
-        format.json { render json: @delrequest.errors, status: :unprocessable_entity }
+        format.html { redirect_to delrequests_path, notice: '削除依頼を作成できませんでした。' }
       end
     end
   end
 
   # PATCH/PUT /delrequests/1
-  # PATCH/PUT /delrequests/1.json
   def update
     respond_to do |format|
       if @delrequest.update(delrequest_params)
-        format.html { redirect_to @delrequest, notice: 'Delrequest was successfully updated.' }
-        format.json { render :show, status: :ok, location: @delrequest }
+        format.html { redirect_to delrequests_path, notice: '削除依頼を更新しました。' }
       else
-        format.html { render :edit }
-        format.json { render json: @delrequest.errors, status: :unprocessable_entity }
+        format.html { redirect_to delrequests_path, notice: '削除依頼を更新できませんでした。' }
       end
     end
   end
 
   # DELETE /delrequests/1
-  # DELETE /delrequests/1.json
   def destroy
     @delrequest.destroy
     respond_to do |format|
-      format.html { redirect_to delrequests_path, notice: 'Delrequest was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to delrequests_path, notice: '削除依頼を削除しました。' }
     end
   end
 
