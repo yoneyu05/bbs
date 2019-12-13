@@ -1,0 +1,40 @@
+<% provide(:title, "削除依頼") %>
+<h1>削除依頼</h1>
+
+<div class="row">
+<div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
+  <% @delrequests.each do |delrequest| %>
+<table class="table table-condensed">
+  <%= will_paginate %>
+  <tbody>
+        <tr class="topicshow">
+      	<td colspan="2">
+          場所：<%= delrequest.address %> の <%= delrequest.del_id %>
+        </td>
+        </tr>
+        <tr class="topicshow">
+          <td colspan="2">理由：<%= simple_format(delrequest.reason) %></td>
+        </tr>
+        <tr class="topicshow">
+          <td  colspan="2"><%= delrequest.created_at %></td>
+        </tr>
+
+        <% if user_signed_in? %>
+        <tr class="topicshow">
+        <td><%= link_to '編集', edit_delrequest_path(delrequest) %></td>
+        <td><%= link_to '削除', delrequest, method: :delete, data: { confirm: ' 削除しますか?' } %></td>
+</tr>
+  </tbody>
+      <% end %>
+      <%= will_paginate %>
+</table>
+    <% end %>
+</div>
+
+<br>
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 topicform">
+	  	  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<%= render 'form', delrequest: @delrequest %>
+</div>

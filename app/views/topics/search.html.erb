@@ -1,0 +1,15 @@
+<p>検索</p>
+<%= form_tag(search_path,:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
+<ul><% @topics.each do |topic| %>
+  <li>
+    <%= link_to topic.title, topic %>
+    <%= topic.created_at %>
+  </li>
+  <%= link_to "編集",edit_topic_path(topic) %>
+  <%= link_to "削除",topic, method: :delete %>
+  <% end %>
+</ul>
