@@ -11,6 +11,9 @@ class PostsController < ApplicationController
     if @post.name == ""
       @post.name = "名無しさん"
     end
+    if @post.content == ""
+      @post.content = "本文ないです"
+    end
     respond_to do |format|
       if @post.save
         format.html {redirect_to topics_show_path(@post.topic_id), notice: '投稿できたよ。' }

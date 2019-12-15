@@ -1,5 +1,16 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    	        <div class="searchform">
+            <ul>
+                <li>
+                	<p>！お知らせ！</p>
+                </li>
+                <li>
+                	書いたものを消したい人は管理ユーザ登録してください。
+                	登録がめんどくさい人は削除依頼を出しておけば、そのうち管理人が消します。
+                </li>
+            </ul>
+        </div>
         <div class="searchform">
             <ul>
                 <li>
@@ -13,7 +24,6 @@
         </div>
         <% @topics.each do |topic| %>
         <table class="table table-condensed table-hover">
-            <%= will_paginate %>
             <tbody>
                 <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
                     <td colspan="2">
@@ -44,9 +54,9 @@
                 </tr>
             </tbody>
             <% end %>
-            <%= will_paginate %>
         </table>
         <% end %>
+            <%= will_paginate previous_label: '&lt 前へ', next_label: '次へ &gt'%>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 topicform">
             <p class="notice">
                 <%= notice %>
@@ -54,6 +64,7 @@
             <p class="alert">
                 <%= alert %>
             </p>
+            <p>スレッドを立てたい人はこちらを使ってください。</p>
             <%= render 'form', topic: @newtopic %>
         </div>
     </div>

@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :消したいURLを書いてください %>
-    <%= form.text_field :address, id: :delrequest_address %>
+    <%= form.text_field :address, id: :delrequest_address, class: :"form-control"  %>
   </div>
 
   <div class="field">
@@ -22,12 +22,12 @@
     <p>Ex:トピックの場合 http://192.168.33.10:3000/topics/7　のトピック</p>
     <p>Ex:コメントの場合 http://192.168.33.10:3000/topics/7　のコメントの5</p>
 
-    <%= form.text_field :del_id, id: :delrequest_del_id %>
+    <%= form.text_field :del_id, id: :delrequest_del_id, class: :"form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :消したい理由を書いてください %>
-    <%= form.text_area :reason, id: :delrequest_reason %>
+    <%= form.text_area :reason, id: :delrequest_reason, class: :"form-control"  %>
   </div>
 
   <div class="actions">

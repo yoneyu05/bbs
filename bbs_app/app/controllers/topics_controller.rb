@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
 
   # GET /topics
   def index
-     @topics = Topic.paginate(page: params[:page]).search(params[:search])
+     @topics = Topic.paginate(page: params[:page], per_page: 10).search(params[:search])
      @newtopic = Topic.new
   end
 
@@ -20,6 +20,9 @@ class TopicsController < ApplicationController
     #debugger
     if @topic.name == ""
       @topic.name = "名無しさん"
+    end
+    if @topic.content == ""
+      @topic.content = "本文ないです"
     end
     respond_to do |format|
       if @topic.save

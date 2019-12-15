@@ -4,7 +4,7 @@ class DelrequestsController < ApplicationController
   # GET /delrequests
   # GET /delrequests.json
   def index
-    @delrequests = Delrequest.paginate(page: params[:page])
+    @delrequests = Delrequest.paginate(page: params[:page], per_page: 10)
     @delrequest = Delrequest.new
   end
 

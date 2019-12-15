@@ -1,3 +1,4 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <%= form_with(model: @newtopic, local: true) do |form| %>
   <% if @newtopic.errors.any? %>
     <div id="error_explanation">
@@ -12,17 +13,17 @@
 
   <div class="field">
     <%= form.label :タイトル %>
-    <%= form.text_field :title, id: :topic_title %>
+    <%= form.text_field :title, id: :topic_title, class: :"form-control" %>
   </div>
 
     <div class="field">
     <%= form.label :名前 %>
-    <%= form.text_field :name, id: :topic_name %>
+    <%= form.text_field :name, id: :topic_name, class: :"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :内容 %>
-    <%= form.text_area :content, id: :topic_content %>
+    <%= form.text_area :content, id: :topic_content, class: :"form-control" %>
   </div>
 
   <%= form.label :画像 %>
@@ -34,3 +35,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
