@@ -1,41 +1,61 @@
-<br><br><br>
 <div class="row">
-<div class="col-xs-5 col-sm-5 col-md-5 col-lg-8">
-    <% @topics.each do |topic| %>
-<table class="table table-condensed table-hover">
-    <%= will_paginate %>
-  <tbody>
-
-        <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
-      	<td  colspan="2">
-          <b><%= topic.title %></b>
-          <%= topic.name %>
-          <%= topic.created_at %>
-        </td>
-        </tr>
-        <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
-          <% if topic.image? %>
-          <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><%= image_tag topic.image.url %></td>
-          <% end %>
-        <td colspan="2"><%= simple_format(topic.content.truncate(50)) %></td>
-        </tr>
-
-        <% if user_signed_in? %>
-        <tr class="topicshow">
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: '削除しますか?' } %></td>
-</tr>
-  </tbody>
-      <% end %>
-    <%= will_paginate %>
-</table>
-    <% end %>
-</div>
-<br>
-
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 topicform" data-spy="affix" data-offset-top="270">
-	  	  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-<%= render 'form', topic: @newtopic %>
-</div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="searchform">
+            <ul>
+                <li>
+                    <%= form_tag(topics_path,:method => 'get') do %>
+                    スレッドのタイトルとか内容で検索できるよ。
+                    <%= text_field_tag :search , params[:search] %>
+                    <%= submit_tag '検索', :title => nil , :content => nil%>
+                    <% end %>
+                </li>
+            </ul>
+        </div>
+        <% @topics.each do |topic| %>
+        <table class="table table-condensed table-hover">
+            <%= will_paginate %>
+            <tbody>
+                <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
+                    <td colspan="2">
+                        <b>
+                            <%= topic.title %></b>
+                        <%= topic.name %>
+                        <%= topic.created_at %>
+                    </td>
+                </tr>
+                <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
+                    <% if topic.image? %>
+                    <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <%= image_tag topic.image.url %>
+                    </td>
+                    <% end %>
+                    <td colspan="2">
+                        <%= simple_format(topic.content.truncate(50)) %>
+                    </td>
+                </tr>
+                <% if user_signed_in? %>
+                <tr class="topicshow">
+                    <td>
+                        <%= link_to 'Edit', edit_topic_path(topic) %>
+                    </td>
+                    <td>
+                        <%= link_to 'Destroy', topic, method: :delete, data: { confirm: '削除しますか?' } %>
+                    </td>
+                </tr>
+            </tbody>
+            <% end %>
+            <%= will_paginate %>
+        </table>
+        <% end %>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 topicform">
+            <p class="notice">
+                <%= notice %>
+            </p>
+            <p class="alert">
+                <%= alert %>
+            </p>
+            <%= render 'form', topic: @newtopic %>
+        </div>
+    </div>
+    <br>
 </div>

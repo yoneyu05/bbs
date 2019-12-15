@@ -7,7 +7,7 @@ class Topic < ApplicationRecord
 
     def self.search(search)
       if search
-        Topic.where(['content LIKE ?', "%#{search}%"])
+        Topic.where(['title LIKE ? OR content LIKE ?', "%#{search}%", "%#{search}%"])
       else
         Topic.all
       end

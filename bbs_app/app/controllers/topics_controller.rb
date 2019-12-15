@@ -1,16 +1,17 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy, :search]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  skip_before_action :set_topic, only: [:search]
 
   # GET /topics
   def index
-     @topics = Topic.paginate(page: params[:page])
+     @topics = Topic.paginate(page: params[:page]).search(params[:search])
      @newtopic = Topic.new
   end
 
   # GET /topics/1
   def show
     @post = Post.new(:topic_id => params[:id])
-    @posts = Post.where(topic_id: params[:id])
+    @posts = Post.where(topic_id: params[:id]).search(params[:search])
   end
 
   # POST /topics
@@ -46,12 +47,6 @@ class TopicsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to topics_path, notice: 'トピックを削除しました。' }
     end
-  end
-
-  #検索機能
-  def search
-    #Viewのformで取得したパラメータをモデルに渡す
-    @topics = Topic.search(params[:search])
   end
 
   private
