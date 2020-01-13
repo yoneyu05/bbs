@@ -34370,3 +34370,100 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.8ms)
 
 
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs/config/environment.rb:8:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-01-14 06:48:56 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (42.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (219.9ms)
+  Rendered topics/index.html.erb within layouts/application (295.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 823ms (Views: 727.1ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 06:49:03 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (5.1ms)
+  Rendered topics/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2020-01-14 06:49:06 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 157ms (Views: 101.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_in" for 192.168.33.1 at 2020-01-14 06:49:07 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/delrequests" for 192.168.33.1 at 2020-01-14 06:49:08 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DelrequestsController#index as HTML
+  Parameters: {"authenticity_token"=>"bLf3iDB8K1M+Iqq/ETZ70w11C6hykIqR00+wPXvdn2vFbGyw0M/tksHaozg6iuTQqMnEw3N5q4Esid78FfGh0g=="}
+  Rendering delrequests/index.html.erb within layouts/application
+  [1m[36mDelrequest Load (0.5ms)[0m  [1m[34mSELECT  `delrequests`.* FROM `delrequests` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `delrequests`[0m
+  Rendered delrequests/_form.html.erb (6.8ms)
+  Rendered delrequests/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 180ms (Views: 84.3ms | ActiveRecord: 74.2ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 06:49:09 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (4.2ms)
+  Rendered topics/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 115ms (Views: 104.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 06:49:10 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (5.1ms)
+  Rendered topics/index.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 115ms (Views: 110.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 06:49:13 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (4.0ms)
+  Rendered topics/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.9ms)
+
+
