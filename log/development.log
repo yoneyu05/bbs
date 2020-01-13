@@ -34564,3 +34564,5 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 1595ms (Views: 1410.8ms | ActiveRecord: 21.4ms)
 
 
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:8:in `<top (required)>')
