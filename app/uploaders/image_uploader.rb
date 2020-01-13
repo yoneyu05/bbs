@@ -17,7 +17,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
 #上限変更
   process resize_to_limit: [300, 200]
-  
+
 
 #JPGで保存
   process :convert => 'jpg'

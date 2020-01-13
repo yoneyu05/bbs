@@ -34518,3 +34518,35 @@ DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale 
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:8:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-01-13 22:04:37 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+(eval):1:in `storage'
+app/uploaders/image_uploader.rb:6:in `<class:ImageUploader>'
+app/uploaders/image_uploader.rb:3:in `<top (required)>'
+app/models/topic.rb:6:in `<class:Topic>'
+app/models/topic.rb:1:in `<top (required)>'
+app/controllers/topics_controller.rb:7:in `index'
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:8:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-01-13 22:07:25 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (236.3ms)
+  Rendered topics/index.html.erb within layouts/application (282.6ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 1502ms (Views: 1414.6ms | ActiveRecord: 2.5ms)
+
+
