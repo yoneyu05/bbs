@@ -34370,3 +34370,87 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.8ms)
 
 
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:8:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-01-14 04:10:14 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (67.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (330.3ms)
+  Rendered topics/index.html.erb within layouts/application (401.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 1651ms (Views: 1540.6ms | ActiveRecord: 44.8ms)
+
+
+Started GET "/users/sign_up" for 192.168.33.1 at 2020-01-14 04:10:26 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 167ms (Views: 114.2ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 04:10:27 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (7.6ms)
+  Rendered topics/index.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 76ms (Views: 71.4ms | ActiveRecord: 1.1ms)
+
+
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:8:in `<top (required)>')
+Started GET "/topics?page=2" for 192.168.33.1 at 2020-01-14 04:30:17 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopicsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 10[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (106.1ms)
+  Rendered topics/index.html.erb within layouts/application (123.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 532ms (Views: 492.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/topics?utf8=%E2%9C%93&search=&commit=%E6%A4%9C%E7%B4%A2" for 192.168.33.1 at 2020-01-14 04:30:20 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"検索"}
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE (title LIKE '%%' OR content LIKE '%%') ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics` WHERE (title LIKE '%%' OR content LIKE '%%')[0m
+  Rendered topics/_form.html.erb (3.4ms)
+  Rendered topics/index.html.erb within layouts/application (148.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 205ms (Views: 200.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 192.168.33.1 at 2020-01-14 04:30:24 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` ORDER BY `topics`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `topics`[0m
+  Rendered topics/_form.html.erb (3.4ms)
+  Rendered topics/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 0.8ms)
+
+
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:7:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/bbs_app/config/environment.rb:8:in `<top (required)>')
