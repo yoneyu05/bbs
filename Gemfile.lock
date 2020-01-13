@@ -233,7 +233,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 1.0.0)
   byebug
   capybara (~> 2.13)
-  carrierwave (= 1.1.0)
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise (~> 4.5.0)
   devise-i18n-views
