@@ -21,12 +21,10 @@ DBトランザクションの制御機能
 webデザイン（jquery-rails/bootstrap-sass/sass-rails）
 画像アップロード機能（carrierwave/mini_magick）
 ページネーション機能（will_paginate/bootstrap-will_paginate）
-DB（mysql2）
+DB（PostgreSQL）
 バージョン管理（git）
 ホスティングサービス（github/bitbucket）
 テスト（minitest）
 
 これから追加する機能・技術
-AWS
-Doocker
-circleCIツール
+デプロイ(heroku)
