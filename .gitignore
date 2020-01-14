@@ -43,3 +43,7 @@
 # アップロードされたテスト画像を無視する
 /public/uploads
 >>>>>>> b0d2f71083e7e7572ea26594d956060a5a62e9b7
+
+---
+BUNDLE_WITHOUT: "production"
+
