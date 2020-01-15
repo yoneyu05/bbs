@@ -25,6 +25,4 @@ DB（PostgreSQL）
 バージョン管理（git）
 ホスティングサービス（github/bitbucket）
 テスト（minitest）
-
-これから追加する機能・技術
 デプロイ(heroku)
