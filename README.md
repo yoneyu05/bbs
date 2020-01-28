@@ -29,4 +29,4 @@ DB（PostgreSQL）
 デプロイ(heroku)
 
 ER図
-！[ER図] （https://user-images.githubusercontent.com/38838696/73279517-9ee6a300-4230-11ea-9102-94198dbe3516.png）
+![ER図](https://user-images.githubusercontent.com/38838696/73279643-cb9aba80-4230-11ea-9d0d-7578d1dd849c.png)
