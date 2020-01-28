@@ -1,6 +1,6 @@
 # README
 1．アプリ概要
-誰でも書き込みできる掲示板。管理ユーザーだけは、書き込みの削除ができる。
+誰でも書き込みしたり、画像を張ることができる掲示板。管理ユーザーだけは、書き込みの削除ができる。
 
 ２．アプリ機能一覧
 トピック投稿・詳細・編集・削除機能
@@ -20,6 +20,7 @@ DBトランザクションの制御機能
 認証機能（devise/devise-i18n-views）
 webデザイン（jquery-rails/bootstrap-sass/sass-rails）
 画像アップロード機能（carrierwave/mini_magick）
+クラウドストレージ(AWS_S3)
 ページネーション機能（will_paginate/bootstrap-will_paginate）
 DB（PostgreSQL）
 バージョン管理（git）
