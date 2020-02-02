@@ -1,5 +1,7 @@
 {
   "name": "bbs_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.1"
+  }
 }

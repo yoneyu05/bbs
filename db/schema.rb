@@ -20,11 +20,26 @@ ActiveRecord::Schema.define(version: 20191127194832) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'srting' for column 'image'
+  create_table "posts", force: :cascade do |t|
+    t.text "content"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.integer "topic_id"
+    t.index ["topic_id"], name: "index_posts_on_topic_id"
+  end
 
-# Could not dump table "topics" because of following StandardError
-#   Unknown type 'srting' for column 'image'
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
+    t.string "name"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.integer "posts_id"
+    t.index ["posts_id"], name: "index_topics_on_posts_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,6 +47,10 @@ ActiveRecord::Schema.define(version: 20191127194832) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
