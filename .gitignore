@@ -5,24 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-<<<<<<< HEAD
-/.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-
-/node_modules
-/yarn-error.log
-
-.byebug_history
-=======
  /.bundle
 
 # Ignore the default SQLite database.
@@ -42,7 +25,6 @@
 
 # アップロードされたテスト画像を無視する
 /public/uploads
->>>>>>> b0d2f71083e7e7572ea26594d956060a5a62e9b7
 
 ---
 BUNDLE_WITHOUT: "production"
