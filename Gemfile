@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+ruby '2.5.7'
 gem 'rails', '~> 5.1.6'
 gem 'devise', '~> 4.5.0'
 gem 'devise-i18n-views'
