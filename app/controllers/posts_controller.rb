@@ -14,11 +14,11 @@ class PostsController < ApplicationController
     if @post.content == ""
       @post.content = "本文ないです"
     end
-    if @post.content.length > 1000
-      format.html { redirect_to  topics_show_path(@post.topic_id), notice: '内容は1000文字までです。' }
-    end
+
     respond_to do |format|
-      if @post.save
+      if @post.content.length > 1000
+        format.html { redirect_to  topics_show_path(@post.topic_id), notice: '内容は1000文字までです。' }
+      elsif @post.save
         format.html {redirect_to topics_show_path(@post.topic_id), notice: '投稿できたよ。' }
       else
         format.html {redirect_to topics_show_path(@post.topic_id), notice: '内容を書いてね。' }

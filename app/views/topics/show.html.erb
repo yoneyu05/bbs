@@ -101,6 +101,7 @@
         <%= alert %>
     </p>
     <p>コメントを書きたい人はこちらを使ってください。</p>
+    <p>内容は1000文字まで入力できます。</p>
     <%= form_with(model: @post, local: true) do |form| %>
     <div class="field">
         <%= form.label :内容 %>

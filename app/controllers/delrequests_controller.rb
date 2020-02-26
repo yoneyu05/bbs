@@ -15,11 +15,10 @@ class DelrequestsController < ApplicationController
   # POST /delrequests
   def create
     @delrequest = Delrequest.new(delrequest_params)
-    if @delrequest.reason.length > 1000
-      format.html { redirect_to  topics_show_path(@post.topic_id), notice: '内容は1000文字までです。' }
-    end
     respond_to do |format|
-      if @delrequest.save
+      if  @delrequest.reason.length > 1000
+        format.html { redirect_to delrequests_path, notice: '消したい理由は1000文字までです。' }
+      elsif @delrequest.save
         format.html { redirect_to delrequests_path, notice: '削除依頼を作成しました。' }
       else
         format.html { redirect_to delrequests_path, notice: '何か書いてください。'  }
