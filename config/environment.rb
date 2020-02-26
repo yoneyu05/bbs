@@ -13,6 +13,3 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
-
-WillPaginate::ViewHelpers.pagination_options[:previous_label] = '&lt 前へ'
-WillPaginate::ViewHelpers.pagination_options[:next_label] = '次へ &gt'

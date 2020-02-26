@@ -30,4 +30,3 @@
 BUNDLE_WITHOUT: "production"
 
 sendgrid.env
-sendgrid.env

@@ -1,125 +1,124 @@
 <% provide(:title, "スレッド") %>
-<div class="row">
+  <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<div class="searchform">
-<ul>
-  <li>
-    <%= form_tag(topics_show_path(@topic.id),:method => 'get') do %>
-    内容を検索できるよ。
-  <%= text_field_tag :search , params[:search] %>
-  <%= submit_tag '検索', :content => nil %>
-<% end %>
-  </li>
-</ul>
-</div>
-        <table class="table table-condensed">
-            <tbody>
-                <tr class="topicshow">
-                    <td colspan="2" class="topic_td">
-                        <b>
-                            <%= @topic.title %>
-                          </b>
-                        <%= @topic.name %>
-                        <%= @topic.created_at %>
-                    </td>
-                    <% if @topic.image? %>
-                <tr class="topicshow">
-                    <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <%= image_tag @topic.image.url %>
-                    </td>
-                    <td class="topic_td">
-                          <%= simple_format(@topic.content) %>
-                    </td>
-                </tr>
-                <% else %>
-                <tr class="topicshow">
-                    <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2" colspan="2">
-                          <%= simple_format(@topic.content) %>
-                    </td>
-                </tr>
-                <% end %>
-                <tr class="topicshow">
-                    <% if user_signed_in? %>
-                    <td>
-                        <%= link_to 'Edit', edit_topic_path(@topic) %>
-                    </td>
-                    <td>
-                        <%= link_to 'Destroy', @topic, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </td>
-                </tr>
-                </tr>
-                <% end %>
-            </tbody>
-        </table>
+      <div class="searchform">
+        <ul>
+          <li>
+            <%= form_tag(topics_show_path(@topic.id),:method => 'get') do %>
+            内容を検索できるよ。
+            <%= text_field_tag :search , params[:search] %>
+            <%= submit_tag '検索', :content => nil %>
+          <% end %>
+        </li>
+      </ul>
     </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <% @posts.each do |post| %>
-        <table class="table table-condensed">
-            <tbody>
-                <tr class="postshow">
-                    <td colspan="2" class="topic_td">
-                        <%= post.id %>　
-                        <%= post.name %>　
-                        <%= post.created_at %>
-                    </td>
-                    <% if post.image? %>
-                <tr class="postshow">
-                    <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <%= image_tag post.image.url %>
-                    </td>
-                    <td class="topic_td">
-                        <%= simple_format(post.content) %>
-                    </td>
-                </tr>
-                    <% else %>
-                    <tr class="postshow">
-                    <td class="topic_td" colspan="2">
-                        <%= simple_format(post.content) %>
-                    </td>
-                    </tr>
-                <% end %>
-                <tr class="postshow">
-                <% if user_signed_in? %>
-                    <td>
-                        <%= link_to 'Edit', edit_post_path(post) %>
-                    </td>
-                    <td>
-                        <%= link_to 'Destroy', post, method: :delete, data: { confirm: '削除しますか?' } %>
-                    </td>
-                </tr>
-                <% end %>
-                </tr>
-            </tbody>
-        </table>
+    <table class="table table-condensed">
+      <tbody>
+        <tr class="topicshow">
+          <td colspan="2" class="topic_td">
+            <b>
+              <%= @topic.title %>
+            </b>
+            <%= @topic.name %>
+            <%= @topic.created_at %>
+          </td>
+          <% if @topic.image? %>
+            <tr class="topicshow">
+              <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <%= image_tag @topic.image.url %>
+              </td>
+              <td class="topic_td">
+                <%= simple_format(@topic.content) %>
+              </td>
+            </tr>
+          <% else %>
+            <tr class="topicshow">
+              <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2" colspan="2">
+                <%= simple_format(@topic.content) %>
+              </td>
+            </tr>
+          <% end %>
+          <tr class="topicshow">
+            <% if user_signed_in? %>
+              <td>
+                <%= link_to 'Edit', edit_topic_path(@topic) %>
+              </td>
+              <td>
+                <%= link_to 'Destroy', @topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <% @posts.each do |post| %>
+      <table class="table table-condensed">
+        <tbody>
+          <tr class="postshow">
+            <td colspan="2" class="topic_td">
+              <%= post.id %>
+              <%= post.name %>
+              <%= post.created_at %>
+            </td>
+            <% if post.image? %>
+              <tr class="postshow">
+                <td class="topic_td col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <%= image_tag post.image.url %>
+                </td>
+                <td class="topic_td">
+                  <%= simple_format(post.content) %>
+                </td>
+              </tr>
+            <% else %>
+              <tr class="postshow">
+                <td class="topic_td" colspan="2">
+                  <%= simple_format(post.content) %>
+                </td>
+              </tr>
+            <% end %>
+            <tr class="postshow">
+              <% if user_signed_in? %>
+                <td>
+                  <%= link_to 'Edit', edit_post_path(post) %>
+                </td>
+                <td>
+                  <%= link_to 'Destroy', post, method: :delete, data: { confirm: '削除しますか?' } %>
+                </td>
+              </tr>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
     <% end %>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 topicform">
-    <p class="notice">
+      <p class="notice">
         <%= notice %>
-    </p>
-    <p class="alert">
+      </p>
+      <p class="alert">
         <%= alert %>
-    </p>
-    <p>コメントを書きたい人はこちらを使ってください。</p>
-    <p>内容は1000文字まで入力できます。</p>
-    <%= form_with(model: @post, local: true) do |form| %>
-    <div class="field">
+      </p>
+      <p>コメントを書きたい人はこちらを使ってください。</p>
+      <p>内容は1000文字まで入力できます。</p>
+      <%= form_with(model: @post, local: true) do |form| %>
+      <div class="field">
         <%= form.label :内容 %>
         <%= form.text_area :content, id: :post_content, class: :"form-control" %>
-    </div>
-    <div class="field">
+      </div>
+      <div class="field">
         <%= form.label :名前 %>
         <%= form.text_field :name, id: :post_name, class: :"form-control" %>
-    </div>
-    <div class="field">
+      </div>
+      <div class="field">
         <%= form.label :画像 %>
         <%= form.file_field :image %>
-    </div>
-    <%= form.hidden_field :topic_id %>
-    <div class="actions">
+      </div>
+      <%= form.hidden_field :topic_id %>
+      <div class="actions">
         <%= form.submit %>
-    </div>
+      </div>
     <% end %>
+  </div>
 </div>
-    </div>
 </div>
