@@ -24,6 +24,9 @@ class TopicsController < ApplicationController
     if @topic.content == ""
       @topic.content = "本文ないです"
     end
+    if @topic.content.length > 1000
+      format.html { redirect_to topics_path, notice: '内容は1000文字までです。' }
+    end
     respond_to do |format|
       if @topic.save
         format.html { redirect_to topics_path, notice: '投稿できたよ。' }
@@ -35,6 +38,10 @@ class TopicsController < ApplicationController
 
   # PATCH/PUT /topics/1
   def update
+
+    if @topic.content.length > 1000
+      format.html { redirect_to @topic, notice: '内容は1000文字までです。' }
+    end
     respond_to do |format|
       if @topic.update(topic_params)
         format.html { redirect_to @topic, notice: 'トピックを更新しました。' }

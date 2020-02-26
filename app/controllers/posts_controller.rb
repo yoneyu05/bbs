@@ -14,6 +14,9 @@ class PostsController < ApplicationController
     if @post.content == ""
       @post.content = "本文ないです"
     end
+    if @post.content.length > 1000
+      format.html { redirect_to  topics_show_path(@post.topic_id), notice: '内容は1000文字までです。' }
+    end
     respond_to do |format|
       if @post.save
         format.html {redirect_to topics_show_path(@post.topic_id), notice: '投稿できたよ。' }
@@ -25,6 +28,9 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
+    if @post.content.length > 1000
+      format.html { redirect_to  topics_show_path(@post.topic_id), notice: '内容は1000文字までです。' }
+    end
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to topics_show_path(@post.topic_id) , notice: 'コメントの更新をしました。'}

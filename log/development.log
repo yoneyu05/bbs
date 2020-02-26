@@ -37731,3 +37731,108 @@ DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n loc
 DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
 DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
 DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-02-08 14:30:30 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (1.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (488.2ms)
+  Rendered topics/index.html.erb within layouts/application (504.7ms)
+  Rendered layouts/_header.html.erb (18.6ms)
+Completed 200 OK in 4130ms (Views: 3931.2ms | ActiveRecord: 2.5ms)
+
+
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-02-08 23:17:23 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (356.2ms)
+  Rendered topics/index.html.erb within layouts/application (369.1ms)
+  Rendered layouts/_header.html.erb (14.6ms)
+Completed 200 OK in 1682ms (Views: 1510.3ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/rails/mailers/user_mailer/account_activation" for 192.168.33.1 at 2020-02-08 23:17:44 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/account_activation"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `new_token' for #<Class:0x000000000454ce60>):
+  
+test/mailers/previews/user_mailer_preview.rb:7:in `account_activation'
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-02-09 01:20:46 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (465.7ms)
+  Rendered topics/index.html.erb within layouts/application (488.8ms)
+  Rendered layouts/_header.html.erb (25.2ms)
+Completed 200 OK in 2388ms (Views: 2172.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/rails/mailers/user_mailer/account_activation" for 192.168.33.1 at 2020-02-09 01:21:10 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/account_activation"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 2.7ms)
+
+
+  
+NoMethodError (undefined method `confirmation_token' for #<Class:0x0000000004258a38>
+Did you mean?  confirmation_keys
+               confirmation_keys=
+               confirm_by_token):
+  
+test/mailers/previews/user_mailer_preview.rb:7:in `account_activation'
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+Started GET "/rails/mailers/user_mailer/account_activation" for 192.168.33.1 at 2020-02-09 01:24:02 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/account_activation"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 2.6ms)
+
+
+  
+NameError (undefined local variable or method `confirm_by_token' for #<UserMailerPreview:0x0000000005741e40>
+Did you mean?  confirmation_keys):
+  
+test/mailers/previews/user_mailer_preview.rb:7:in `account_activation'
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:17:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/vagrant/projects/bbs/config/environment.rb:18:in `<top (required)>')
+Started GET "/" for 192.168.33.1 at 2020-02-25 13:32:26 +0000
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (1.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered topics/_form.html.erb (796.9ms)
+  Rendered topics/index.html.erb within layouts/application (831.1ms)
+  Rendered layouts/_header.html.erb (14.4ms)
+Completed 200 OK in 4632ms (Views: 4443.7ms | ActiveRecord: 3.2ms)
+
+
