@@ -64,8 +64,8 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
- host = 'mybbsapp.herokuapp.com'
- config.action_mailer.default_url_options = { host: host }
+ # host = 'mybbsapp.herokuapp.com'
+ # config.action_mailer.default_url_options = { host: host }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
