@@ -27,8 +27,7 @@
             <tbody>
                 <tr onclick='window.location="<%= '/topics/' + topic.id.to_s %>"' role="link" class="topicshow">
                     <td colspan="2">
-                        <b>
-                            <%= topic.title %></b>
+                        <b><%= topic.title %></b>
                         <%= topic.name %>
                         <%= topic.created_at %>
                     </td>
