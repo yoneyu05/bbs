@@ -14,5 +14,5 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true
 }
 
-WillPaginate::ViewHelpers.will_paginate.previous_label[:previous_label] = '&lt 前へ'
-WillPaginate::ViewHelpers.will_paginate.previous_label[:next_label] = '次へ &gt'
+WillPaginate::ViewHelpers.pagination_options[:previous_label] = '&lt 前へ'
+WillPaginate::ViewHelpers.pagination_options[:next_label] = '次へ &gt'
